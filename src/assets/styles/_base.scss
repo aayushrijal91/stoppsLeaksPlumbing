@@ -1,0 +1,139 @@
+@function imgUrl($file, $path: "background"){
+@return url("../images/" + $path + "/" + $file) no-repeat;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+    border: 0 !important;
+}
+
+body {
+    font-family: $font-body;
+    color: $black;
+    font-weight: 400;
+    margin: 0 auto;
+    background-color: $white;
+    font-size: 1rem;
+    letter-spacing: -0.03em !important;
+    overflow-x: hidden;
+    line-height: 1.25;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.btn {
+    height: 57px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1;
+    font-size: 1.125rem;
+
+    &.bordered {
+        border-width: 2px;
+    }
+}
+
+.description {
+    @include media-breakpoint-down(sm) {
+        font-size: 1rem !important;
+    }
+}
+
+.object-fit-cover {
+    object-fit: cover;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: $white;
+}
+
+::-webkit-scrollbar-thumb {
+    background: $secondary;
+}
+
+.form-control {
+    font-size: 1rem;
+    display: inline-block;
+    border-radius: 0;
+    border-color: #bbbbbb;
+    background-color: $white;
+    height: 60px;
+    padding: 0 1.5rem;
+
+    &:focus {
+        outline: none;
+        box-shadow: none;
+        border-color: $black;
+    }
+}
+
+textarea.form-control {
+    height: 9.125rem !important;
+    padding-top: 1.25rem;
+}
+
+//Go To Top
+#return-to-top {
+    position: fixed;
+    bottom: 95px;
+    right: 13px;
+    z-index: 9;
+    background: $primary;
+    width: 50px;
+    height: 50px;
+    display: block;
+    text-decoration: none;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    border-radius: 35px;
+    display: none;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+#return-to-top img {
+    margin: 0;
+    position: relative;
+    left: 13px;
+    top: 10px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+#return-to-top:hover {
+    background: rgba(0, 0, 0, 0.9);
+}
+
+#return-to-top:hover img {
+    top: 4px;
+}

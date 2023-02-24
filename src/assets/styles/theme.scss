@@ -1,0 +1,17 @@
+// Variable Overrides
+@import "variables";
+
+// Bootstrap
+@import "node_modules/bootstrap/scss/bootstrap.scss";
+
+// Slick
+@import "node_modules/slick-carousel/slick/slick.scss";
+@import "node_modules/slick-carousel/slick/slick-theme.scss";
+
+// AOS
+@import "aos";
+
+// Custom CSS
+@import "fonts";
+@import "base";
+@import "styles";

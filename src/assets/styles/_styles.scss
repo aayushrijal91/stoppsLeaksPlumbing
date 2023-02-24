@@ -1,0 +1,29 @@
+@function imgUrl($file, $path: "background"){
+@return url("../images/" + $path + "/" + $file) no-repeat;
+}
+
+.hero_nav {
+    .navigation nav.navbar {
+        .navbar-nav {
+            ul {
+                margin-bottom: 0;
+                padding-inline-start: 0;
+
+                li {
+                    list-style: none;
+
+                    a {
+                        color: $white;
+                        line-height: 1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+header {
+    padding: 137px 0 463px;
+    background-size: cover;
+    background-position: center;
+}
