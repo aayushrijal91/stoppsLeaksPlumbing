@@ -1,21 +1,20 @@
-# Wordpress Dev theme
+# [Stopps Leaks Plumbing](https://stoppsleaksplumbing.com.au/)
 
 ## _Author Information_
 
-https://www.aiims.com.au/
-
-Developer: Aayush Rijal
-
-Email: arijal@aiims.com.au, aayush.rijal99@gmail.com
+Developer: [Aayush Rijal](https://www.aayushrijal.net)
 
 Contact: 0452637371
 
-Github: 
-Design: 
+[Github](https://github.com/aayushrijal91/stoppsLeaksPlumbing)
+[Figma](https://www.figma.com/file/WVQjbeCWiQzrd35yRBNBm1/Website-2023?node-id=0%3A1&t=LgVC9e0Tuh72Qbxl-1)
 
 ## _Instruction_
 
-- npm install
-- npm start
+```bash
+    cd dev-theme
+    npm install
+    npm start
+```
 
 Reference for full repository
