@@ -57,8 +57,8 @@
                             <?= get_field('mobile_number', 'options') ?>
                         </a>
 
-                        <a href="<?= get_site_url() ?>" class="btn btn-secondary rounded-pill text-white px-4 fw-600">
-                            Get In Touch
+                        <a href="<?= get_field('nav_button', 'options')['url'] ?>" class="btn btn-secondary rounded-pill text-white px-4 fw-600">
+                            <?= get_field('nav_button', 'options')['title'] ?>
                         </a>
                     </div>
                 </div>
@@ -74,7 +74,7 @@
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M0 22C0 20.8954 0.89543 20 2 20H30C31.1046 20 32 20.8954 32 22C32 23.1046 31.1046 24 30 24H2C0.89543 24 0 23.1046 0 22Z" fill="#363F94" />
                         </svg>
                     </a>
-        
+
                     <div class="collapse navbar-collapse" id="mainNav">
                         <?php wp_nav_menu(array(
                             'menu' => 'Primary Menu',

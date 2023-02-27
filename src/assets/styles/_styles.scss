@@ -3,11 +3,13 @@
 }
 
 .hero_nav {
-    .navigation nav.navbar {
-        .navbar-nav {
-            ul {
+    nav.navbar {
+        .primary_menu {
+            ul.navbar-nav {
                 margin-bottom: 0;
                 padding-inline-start: 0;
+                display: flex;
+                gap: 72px;
 
                 li {
                     list-style: none;
@@ -15,6 +17,11 @@
                     a {
                         color: $white;
                         line-height: 1;
+                        font-size: 1.125rem;
+                    }
+
+                    &.current-menu-item a {
+                        font-weight: 600;
                     }
                 }
             }
@@ -29,7 +36,40 @@ header {
 }
 
 .homepage {
-    .section_1 {
+    section.section_1 {
         padding: 75px 0;
+    }
+
+    section.section_2 {
+        padding: 92px 0;
+    }
+}
+
+.footer_top {
+    .footer_menu {
+        ul.menu {
+            padding-inline-start: 0;
+            margin: 0;
+            list-style: none;
+
+            li {
+                padding: 16px 0;
+
+                @include media-breakpoint-down(lg) {
+                    padding: 8px 0;
+                }
+
+                a.nav-link {
+                    @include media-breakpoint-down(sm) {
+                        font-size: 0.875rem;
+                    }
+                }
+            }
+        }
+
+        ul.menu_services {
+            column-count: 2;
+            gap: 35px;
+        }
     }
 }

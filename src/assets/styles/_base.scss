@@ -91,6 +91,21 @@ a {
     }
 }
 
+.services {
+    .service_card .featured_image {
+        height: 395px;
+        overflow: hidden;
+        border-radius: 10px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+}
+
 .object-fit-cover {
     object-fit: cover;
 }
