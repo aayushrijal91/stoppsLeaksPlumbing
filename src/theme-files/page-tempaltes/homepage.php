@@ -6,10 +6,13 @@
  */
 get_header();
 get_template_part('parts/section', 'banner');
+
+$section_1 = get_field('section_1');
+$section_3 = get_field('section_3');
+$section_4 = get_field('section_4');
 ?>
 
 <div class="homepage">
-    <?php $section_1 = get_field('section_1'); ?>
     <section class="section_1 bg-primary text-white">
         <div class="container">
             <div class="row justify-content-between">
@@ -28,51 +31,48 @@ get_template_part('parts/section', 'banner');
     </section>
 
     <section class="section_2">
-        <div class="container">
-            <div class="fw-600 fs-75 text-primary lh-1 pb-4">Our Comprehensive Plumbing Services</div>
-            <div class="fs-20 pt-2">
-                Choosing the right plumbing can save you time and money. Stopps Plumbing can meet all your plumbing needs.
-                <br><span class="fw-600">Our Services include, but are not limited to:</span>
-            </div>
-            <div class="row py-6 services gy-6">
-                <?php
-                $args = array(
-                    'posts_per_page' => -1,
-                    'post_type' => 'services',
-                    'orderby' => 'menu_order',
-                    'order' => 'ASC',
-                );
+        <?php get_template_part('parts/section', 'servicesListing') ?>
+    </section>
 
-                $the_query = new WP_Query($args);
-                if ($the_query->have_posts()) :
-                    while ($the_query->have_posts()) :
-                        $the_query->the_post();
-                        $featured_img_url = get_the_post_thumbnail_url($post->ID, 'full');
-                ?>
-                        <div class="col-md-6 col-lg-4">
-                            <div class="service_card">
-                                <div class="featured_image"><img src="<?= $featured_img_url ?>" alt="featured"></div>
-                                <div class="pt-4"><a href="<?= get_the_permalink() ?>" class="fs-35 lh-1 fw-600"><?= get_the_title() ?></a></div>
-                            </div>
-                        </div>
+    <section class="section_3 lazyload" data-src="<?= $section_3['cover_image']['url'] ?>">
+        <div class="section_3_inner">
+            <div class="container">
+                <div class="fw-600 fs-50"><?= $section_3['heading'] ?></div>
+                <div class="description">
+                    <?= $section_3['description'] ?>
+                </div>
+                <a href="<?= $section_3['button']['url'] ?>" target="<?= $section_3['button']['target'] ?>" class="btn btn-secondary rounded-pill text-white px-4 fw-600"><?= $section_3['button']['title'] ?></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section_4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="fs-75 fw-600 text-primary lh-0_86"><?= $section_4['heading'] ?></div>
+                </div>
+            </div>
+            <div class="row">
                 <?php
+                if (have_rows('section_4')) :
+                    while (have_rows('section_4')) : the_row();
+                        if (have_rows('reasons')) :
+                            while (have_rows('reasons')) : the_row();
+                ?>
+                                <div class="col-md-6 col-lg-3">
+                                    <div class="why-us-card">
+                                        <?= get_sub_field('icon') ?>
+                                        <?= get_sub_field('text') ?>
+                                    </div>
+                                </div>
+                <?php
+                            endwhile;
+                        endif;
                     endwhile;
                 endif;
                 ?>
-
-                <div class="col">
-                    <div class="service_card">
-                        <div class="featured_image bg-secondary px-5 d-flex align-items-center text-white">
-                            <div>
-                                <div class="fs-35 fw-600 lh-1">We Would love to hear from you!</div>
-                                <div class="fs-20 pt-2 pb-5">Why not give us a call on <a href="tel:<?= get_field('mobile_number', 'option') ?>" class="text-white fw-600"><?= get_field('mobile_number', 'option') ?></a> or <a href="tel:<?= get_field('phone_number', 'option') ?>" class="text-white fw-600"><?= get_field('phone_number', 'option') ?></a></div>
-                                <a href="" class="btn btn-primary rounded-pill fw-600 px-4">Get In Touch</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
-            <a href="" class="btn btn-primary rounded-pill fw-600 px-4">Fix My Plumbing</a>
         </div>
     </section>
 </div>

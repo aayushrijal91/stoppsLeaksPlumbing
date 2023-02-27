@@ -43,6 +43,34 @@ header {
     section.section_2 {
         padding: 92px 0;
     }
+
+    section.section_3 {
+        padding-top: 680px;
+        background-size: cover;
+        background-position: center;
+
+        .section_3_inner {
+            padding: 78px 0;
+            background: $primary;
+            border-radius: 0 290px 0 0;
+            color: $white;
+        }
+    }
+
+    section.section_4 {
+        padding: 75px 0;
+
+        .why-us-card {
+            background: $white;
+            box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            height: 245px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+    }
 }
 
 .footer_top {
