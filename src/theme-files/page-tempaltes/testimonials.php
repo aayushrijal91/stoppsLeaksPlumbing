@@ -15,11 +15,11 @@ $section_1 = get_field('section_1');
         <section class="section_1 bg-primary text-white">
             <div class="container">
                 <div class="row justify-content-between">
-                    <div class="col-lg-6">
+                    <div class="col-lg-6" data-aos="fade-right">
                         <div class="fs-50 fw-600 lh-1"><?= $section_1['heading'] ?></div>
                         <div class="description"><?= $section_1['description'] ?></div>
                     </div>
-                    <div class="col-lg-5">
+                    <div class="col-lg-5" data-aos="fade-left">
                         <div class="section_image"><img src="<?= $section_1['image']['url'] ?>" class="w-100" alt="<?= $section_1['image']['alt'] ?>"></div>
                     </div>
                 </div>
@@ -32,7 +32,7 @@ $section_1 = get_field('section_1');
             <div class="text-center fs-50 lh-1 fw-600 pb-6 text-primary">Client love</div>
             <div class="reviews_slider" id="reviews_slider">
                 <div class="review_slide">
-                    <div class="fs-20 fw-600">Jonathan B.</div>
+                    <div class="fs-20 fw-600 text-primary">Jonathan B.</div>
                     <div class="fs-18 py-3 lh-2">
                         I booked Aaron to change our toilet cistern after reading the positive reviews on Google. I’m very glad I did. He is customer focused, honest, communicates clearly, is reasonably priced and generous with his advice. On the way out, he adjusted the thermostatic control on our hot water system after my complaining about other tradesmen who hadn’t fixed the problem. He didn’t charge me for this. His number is now permanently in my phone.
                     </div>
