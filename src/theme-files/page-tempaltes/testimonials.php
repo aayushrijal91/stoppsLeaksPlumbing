@@ -27,6 +27,28 @@ $section_1 = get_field('section_1');
         </section>
     <?php endif; ?>
 
+    <section class="reviews">
+        <div class="container">
+            <div class="text-center fs-50 lh-1 fw-600 pb-6 text-primary">Client love</div>
+            <div class="reviews_slider" id="reviews_slider">
+                <div class="review_slide">
+                    <div class="fs-20 fw-600">Jonathan B.</div>
+                    <div class="fs-18 py-3 lh-2">
+                        I booked Aaron to change our toilet cistern after reading the positive reviews on Google. I’m very glad I did. He is customer focused, honest, communicates clearly, is reasonably priced and generous with his advice. On the way out, he adjusted the thermostatic control on our hot water system after my complaining about other tradesmen who hadn’t fixed the problem. He didn’t charge me for this. His number is now permanently in my phone.
+                    </div>
+                    <svg width="119" height="19" viewBox="0 0 119 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.5 0L11.6329 6.56434H18.535L12.9511 10.6213L15.084 17.1857L9.5 13.1287L3.91604 17.1857L6.04892 10.6213L0.464963 6.56434H7.36712L9.5 0Z" fill="#3498DB" />
+                        <path d="M34.5 0L36.6329 6.56434H43.535L37.9511 10.6213L40.084 17.1857L34.5 13.1287L28.916 17.1857L31.0489 10.6213L25.465 6.56434H32.3671L34.5 0Z" fill="#3498DB" />
+                        <path d="M59.5 0L61.6329 6.56434H68.535L62.9511 10.6213L65.084 17.1857L59.5 13.1287L53.916 17.1857L56.0489 10.6213L50.465 6.56434H57.3671L59.5 0Z" fill="#3498DB" />
+                        <path d="M84.5 0L86.6329 6.56434H93.535L87.9511 10.6213L90.084 17.1857L84.5 13.1287L78.916 17.1857L81.0489 10.6213L75.465 6.56434H82.3671L84.5 0Z" fill="#3498DB" />
+                        <path d="M109.5 0L111.633 6.56434H118.535L112.951 10.6213L115.084 17.1857L109.5 13.1287L103.916 17.1857L106.049 10.6213L100.465 6.56434H107.367L109.5 0Z" fill="#3498DB" />
+                    </svg>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
     <?= get_template_part('parts/section', 'cta'); ?>
 </div>
 

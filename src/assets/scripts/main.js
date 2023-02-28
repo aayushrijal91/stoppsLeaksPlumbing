@@ -8,7 +8,11 @@ jQuery(function ($) {
                     duration: 1500,
                 });
                 $(() => {
-
+                    $("#reviews_slider").slick({
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                        centerMode: true,
+                    });
                 });
             }, // end misc
         }, // end ui
