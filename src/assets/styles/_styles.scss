@@ -88,6 +88,59 @@ header {
     }
 }
 
+.about_us {
+    section.section_1 {
+        padding: 75px 0;
+    }
+
+    section.section_2 {
+        padding: 116px 0 96px;
+
+        .commitment {
+            background: $secondary;
+            min-height: 117px;
+            color: $white;
+            font-weight: 500;
+            font-size: 1.25rem;
+            border-radius: 10px;
+            padding: 16px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    section.section_3 {
+        padding: 89px 0;
+        background: $primary;
+        color: $white;
+    }
+
+    section.section_4 {
+        padding: 116px 0;
+    }
+
+    section.section_5 {
+        padding: 105px 0;
+
+        .section_image::before {
+            border-color: $primary !important;
+        }
+    }
+
+    section.section_6 {
+        padding: 94px 0;
+        
+        .section_6_inner {
+            padding: 86px 60px;
+            background: $primary imgUrl('pipes-secondary.png') right center;
+            border-radius: 10px;
+            color: $white;
+        }
+    }
+}
+
 .footer_top {
     .footer_menu {
         ul.menu {
