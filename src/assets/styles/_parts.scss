@@ -1,0 +1,14 @@
+section.service_listing {
+    padding: 92px 0;
+}
+
+section.general_cta {
+    padding: 94px 0;
+    
+    .general_cta_inner {
+        padding: 86px 60px;
+        background: $primary imgUrl('pipes-secondary.png') right center;
+        border-radius: 10px;
+        color: $white;
+    }
+}

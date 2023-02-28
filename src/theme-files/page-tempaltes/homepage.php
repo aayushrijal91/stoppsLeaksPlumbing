@@ -33,9 +33,7 @@ $section_5 = get_field('section_5');
         </section>
     <?php endif; ?>
 
-    <section class="section_2">
-        <?php get_template_part('parts/section', 'servicesListing') ?>
-    </section>
+    <?php get_template_part('parts/section', 'servicesListing') ?>
 
     <?php if (!empty($section_3['heading'])) : ?>
         <section class="section_3 lazyload" data-src="<?= $section_3['cover_image']['url'] ?>">

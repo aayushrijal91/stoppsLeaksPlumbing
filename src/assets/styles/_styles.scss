@@ -40,10 +40,6 @@ header {
         padding: 75px 0;
     }
 
-    section.section_2 {
-        padding: 92px 0;
-    }
-
     section.section_3 {
         padding-top: 680px;
         background-size: cover;
@@ -117,10 +113,6 @@ header {
         color: $white;
     }
 
-    section.section_4 {
-        padding: 116px 0;
-    }
-
     section.section_5 {
         padding: 105px 0;
 
@@ -128,16 +120,11 @@ header {
             border-color: $primary !important;
         }
     }
+}
 
-    section.section_6 {
-        padding: 94px 0;
-        
-        .section_6_inner {
-            padding: 86px 60px;
-            background: $primary imgUrl('pipes-secondary.png') right center;
-            border-radius: 10px;
-            color: $white;
-        }
+.testimonials {
+    section.section_1 {
+        padding: 88px 0;
     }
 }
 

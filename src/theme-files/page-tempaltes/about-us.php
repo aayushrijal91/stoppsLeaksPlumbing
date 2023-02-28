@@ -99,9 +99,7 @@ $section_6 = get_field('section_6');
         </section>
     <?php endif; ?>
 
-    <section class="section_4">
-        <?php get_template_part('parts/section', 'servicesListing') ?>
-    </section>
+    <?php get_template_part('parts/section', 'servicesListing') ?>
 
     <?php if (!empty($section_5['heading'])) : ?>
         <section class="section_5 bg-secondary text-white">
@@ -119,29 +117,7 @@ $section_6 = get_field('section_6');
         </section>
     <?php endif; ?>
 
-    <?php if (!empty($section_6['heading'])) : ?>
-        <section class="section_6">
-            <div class="container">
-                <div class="section_6_inner">
-                    <div class="fs-75 fw-600 lh-0_86"><?= $section_6['heading'] ?></div>
-                    <div class="description"><?= $section_6['description'] ?></div>
-                    <div class="row">
-                        <div class="col-auto">
-                            <a href="tel:<?= get_field('phone_number', 'option') ?>" class="btn bordered border-white rounded-pill text-white px-4 fw-600"><?= get_field('phone_number', 'option') ?></a>
-                        </div>
-                        <div class="col-auto">
-                            <a href="tel:<?= get_field('mobile_number', 'option') ?>" class="btn bordered border-white rounded-pill text-white px-4 fw-600"><?= get_field('mobile_number', 'option') ?></a>
-                        </div>
-                        <div class="col-auto">
-                            <a href="<?= $section_6['button']['url'] ?>" class="btn btn-secondary rounded-pill text-white px-4 fw-600">
-                                <?= $section_6['button']['title'] ?>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    <?php endif; ?>
+    <?= get_template_part('parts/section', 'cta'); ?>
 </div>
 
 <?php get_footer(); ?>
