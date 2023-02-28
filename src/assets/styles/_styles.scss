@@ -95,7 +95,7 @@ header {
             margin: 0;
             list-style: none;
 
-            li {
+            li.menu-item {
                 padding: 16px 0;
 
                 @include media-breakpoint-down(lg) {
@@ -103,6 +103,8 @@ header {
                 }
 
                 a.nav-link {
+                    color: $white;
+
                     @include media-breakpoint-down(sm) {
                         font-size: 0.875rem;
                     }

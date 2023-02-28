@@ -85,7 +85,7 @@
                         </div>
                     </div>
                     <div class="col-lg-auto">
-                        <div class="fs-20 fw-700 pb-3">Services</div>
+                        <div class="fs-20 fw-700 pb-3">Support</div>
                         <?php wp_nav_menu(array(
                             'menu' => 'Footer Support',
                             'item_class' => 'nav-item',
