@@ -393,6 +393,30 @@ header {
 .locations {
 }
 
+.inner_service {
+    section.section_1 {
+        padding: 94px 0;
+    }
+
+    section.section_2 {
+        padding: 87px 0 99px;
+
+        .service_card {
+            background: $secondary;
+            border-radius: 10px;
+            height: 117px;
+            color: $white;
+            font-size: 1.25rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 8px 60px;
+        }
+    }
+}
+
 .footer_top {
     .footer_menu {
         ul.menu {
