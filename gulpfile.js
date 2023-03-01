@@ -103,7 +103,7 @@ function clean() {
 
 function watch() {
     browserSync.init({
-        proxy: encodeURI(`localhost/projects/${path.resolve(__dirname, '../').split(path.sep).pop()}/`),
+        proxy: encodeURI(`${path.resolve(__dirname, '../').split(path.sep).pop()}.test/`),
         injectChanges: true,
     });
 

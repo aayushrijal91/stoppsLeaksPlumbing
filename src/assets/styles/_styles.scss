@@ -132,15 +132,75 @@ header {
 
         .reviews_slider {
             .slick-track {
-                margin: 50px 0 44px;
+                margin: 80px 0 44px;
+                display: flex;
+            }
+
+            .slick-list {
+                padding: 0 !important;
+            }
+
+            .slick-slide {
+                height: inherit;
+                margin: 0 17px;
+                transform: scale(0.8);
+                transition: 0.2s all;
+
+                &.slick-current.slick-center {
+                    transform: scale(1);
+                }
             }
 
             .review_slide {
+                position: relative;
                 background: $white;
-                box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
+                filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.25));
                 border-radius: 30px;
                 text-align: center;
-                padding: 85px 21px;
+                padding: 85px 27px 44px;
+                display: flex;
+                flex-direction: column;
+                text-transform: uppercase;
+                align-items: center;
+
+                .initial {
+                    height: 124px;
+                    width: 124px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background: $primary;
+                    color: $secondary;
+                    border-radius: 50%;
+                    margin: 0 auto;
+                    position: absolute;
+                    top: -65px;
+                    font-size: 75px;
+                    line-height: 1;
+                    font-weight: 600;
+                    border: 5px solid $white;
+                }
+            }
+
+            .slick-arrow {
+                width: 50px;
+                height: 50px;
+
+                &.slick-prev::before {
+                    display: block;
+                    height: 50px;
+                    width: 50px;
+                    content: "";
+                    background-image: url("data:image/svg+xml,%3Csvg width='50' height='50' viewBox='0 0 50 50' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 35.7142L19.2857 24.6428L30 13.5714' stroke='%232E3192' stroke-width='2.14286' stroke-linecap='round'/%3E%3Ccircle cx='25' cy='25' r='23.9286' stroke='%232E3192' stroke-width='2.14286'/%3E%3C/svg%3E");
+                }
+
+                &.slick-next::before {
+                    display: block;
+                    height: 50px;
+                    width: 50px;
+                    content: "";
+                    background-image: url("data:image/svg+xml,%3Csvg width='50' height='50' viewBox='0 0 50 50' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 35.7142L30.7143 24.6428L20 13.5714' stroke='%232E3192' stroke-width='2.14286' stroke-linecap='round'/%3E%3Ccircle cx='25' cy='25' r='23.9286' transform='matrix(-1 0 0 1 50 0)' stroke='%232E3192' stroke-width='2.14286'/%3E%3C/svg%3E");
+                }
             }
         }
     }
