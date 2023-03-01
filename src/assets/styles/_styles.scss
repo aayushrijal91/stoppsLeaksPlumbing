@@ -206,6 +206,89 @@ header {
     }
 }
 
+.contact_us {
+    .tagline {
+        background: $secondary;
+        padding: 77px 0;
+        line-height: 1;
+        color: $white;
+        text-align: center;
+        font-size: 50px;
+        font-weight: 600;
+    }
+
+    section.form {
+        margin: 175px 0 83px;
+        background: $primary;
+
+        ul.contacts {
+            padding: 62px 0;
+            padding-inline-start: 0;
+
+            li {
+                list-style: none;
+                color: $white;
+                font-weight: 500;
+                font-size: 1.25rem;
+                padding: 20px 0;
+                display: flex;
+                align-items: center;
+                gap: 24px;
+            }
+        }
+
+        .main_form {
+            position: absolute;
+            top: -103px;
+            background: $white;
+            padding: 41px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
+
+            form {
+                span.wpcf7-form-control-wrap {
+                    display: block;
+                }
+
+                input,
+                select {
+                    height: 44px;
+                }
+
+                input,
+                select,
+                textarea {
+                    width: 100%;
+                    border: none;
+                    margin: 10px 0;
+                    border-radius: 5px;
+                    border: 1px solid rgba(0, 0, 0, 0.05);
+                    padding: 8px;
+
+                    &:focus {
+                        outline: none;
+                        box-shadow: none;
+                    }
+                }
+
+                button[type=submit] {
+                    border-radius: 100px;
+                    background-color: $primary;
+                    color: $white;
+                    border: none;
+                    height: 57px;
+                    display: flex;
+                    align-items: center;
+                    padding: 8px 24px;
+                    font-size: 1.125rem;
+                    font-weight: 600;
+                    margin-top: 30px;
+                }
+            }
+        }
+    }
+}
+
 .footer_top {
     .footer_menu {
         ul.menu {

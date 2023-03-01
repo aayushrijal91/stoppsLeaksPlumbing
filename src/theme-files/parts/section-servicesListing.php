@@ -2,7 +2,9 @@
 if (!empty($services['heading'])) : ?>
     <section class="service_listing">
         <div class="container">
-            <div class="fw-600 fs-75 text-primary lh-1 pb-4"><?= $services['heading'] ?></div>
+            <?php if (!empty($services['heading'])) : ?>
+                <div class="fw-600 fs-75 text-primary lh-1 pb-4"><?= $services['heading'] ?></div>
+            <?php endif; ?>
             <div class="fs-20 pt-2">
                 <?= $services['sub_heading'] ?>
             </div>
@@ -45,7 +47,9 @@ if (!empty($services['heading'])) : ?>
                     </div>
                 </div>
             </div>
-            <a href="<?= $services['main_button']['url'] ?>" class="btn btn-primary rounded-pill fw-600 px-4" target="<?= $services['main_button']['target'] ?>"><?= $services['main_button']['title'] ?></a>
+            <?php if (!empty($services['main_button'])) : ?>
+                <a href="<?= $services['main_button']['url'] ?>" class="btn btn-primary rounded-pill fw-600 px-4" target="<?= $services['main_button']['target'] ?>"><?= $services['main_button']['title'] ?></a>
+            <?php endif; ?>
         </div>
     </section>
 <?php endif; ?>
