@@ -7,14 +7,11 @@ if (!empty(get_field('banner')['heading']) && !is_home()) {
     $coverImg = get_field('banner')['cover_image'];
     $button = get_field('banner')['button'];
     $colorPreference = get_field('banner')['heading_color_preference'];
-} elseif (is_home()) {
-    $heading = "Our Blog";
-    $sub_heading = "Our team will assist you in researching, organising, and negotiating loans on your behalf. View our services below.";
 }
 
 if (!empty($heading)) :
 ?>
-    <header class="lazyload" data-src="<?= $coverImg['url'] ?>">
+    <header class="lazyload<?= (is_front_page() && is_page()) ? ' homepage': '' ?><?= (!is_front_page() && is_page()) ? ' page': '' ?><?= (is_single()) ? ' servicePage': '' ?>" data-src="<?= $coverImg['url'] ?>">
         <div class="container">
             <div class="row<?= is_front_page() ? ' justify-content-end' : '' ?>">
                 <div class="<?= is_front_page() ? 'col-lg-10 text-end' : 'col-lg-9' ?>">

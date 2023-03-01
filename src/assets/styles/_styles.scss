@@ -113,9 +113,27 @@
 }
 
 header {
-    padding: 137px 0 463px;
     background-size: cover;
     background-position: center;
+    height: 500px;
+    padding: 157px 0;
+
+    &.homepage {
+        height:913px;
+        padding: 137px 0;
+    }
+
+    &.page {
+        height: 700px;
+        padding: 157px 0;
+    }
+
+    &.servicePage {
+        height: 700px;
+        padding: 80px 0;
+        display: flex;
+        align-items: center;
+    }
 }
 
 .homepage {
