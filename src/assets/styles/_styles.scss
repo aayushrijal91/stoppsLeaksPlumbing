@@ -24,6 +24,89 @@
                         font-weight: 600;
                     }
                 }
+
+                .dropdown {
+                    position: relative;
+                    perspective: 1000px;
+                    z-index: 100;
+
+                    &::after {
+                        position: absolute;
+                        content: "";
+                        background: url("data:image/svg+xml,%3Csvg width='8' height='6' viewBox='0 0 8 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L4 4L7 1' stroke='white' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat;
+                        width: 8px;
+                        height: 5px;
+                        top: 16px;
+                        right: -5px;
+                    }
+
+                    &:hover {
+                        cursor: pointer;
+
+                        .dropdown-menu li {
+                            display: block;
+                        }
+                    }
+
+                    .dropdown-menu {
+                        display: block;
+                        background: none;
+                        border-radius: 0;
+                        top: 100%;
+                        left: 0;
+                        width: 100%;
+                        perspective: 1000px;
+                        z-index: -1;
+
+                        li {
+                            display: none;
+                            color: $white;
+                            background: $dark;
+                            padding: 8px 2px;
+                            opacity: 0;
+
+                            a.nav-link {
+                                font-size: 12px;
+                            }
+
+                            &:hover {
+                                background: $secondary;
+                            }
+                        }
+
+                        @keyframes rotateX {
+                            0% {
+                                opacity: 0;
+                                transform: rotateX(-90deg);
+                            }
+
+                            50% {
+                                transform: rotateX(-20deg);
+                            }
+
+                            100% {
+                                opacity: 1;
+                                transform: rotateX(0deg);
+                            }
+                        }
+
+                    }
+                }
+
+                @mixin animate-menu-items($selector, $duration-per-item) {
+                    $items: $selector;
+
+                    @for $i from 1 through length($items) {
+                        $item: nth($items, $i);
+
+                        #{$item} {
+                            transform-origin: top center;
+                            animation: rotateX 300ms (($i - 1) * $duration-per-item) ease-in-out forwards;
+                        }
+                    }
+                }
+
+                @include animate-menu-items('ul.dropdown-menu li', 60ms);
             }
         }
     }
@@ -287,6 +370,9 @@ header {
             }
         }
     }
+}
+
+.locations {
 }
 
 .footer_top {
