@@ -10,6 +10,7 @@ $section_5 = get_field('section_5');
 $section_6 = get_field('section_6');
 $section_7 = get_field('section_7');
 $section_8 = get_field('section_8');
+$section_9 = get_field('section_9');
 ?>
 <div class="inner_service">
     <div class="d-flex flex-column">
@@ -187,7 +188,9 @@ $section_8 = get_field('section_8');
                         <?php if (!empty($section_6['description_3'])) : ?>
                             <div class="description"><?= $section_6['description_3'] ?></div>
                         <?php endif; ?>
-                        <a href="<?= $section_6['button']['url'] ?>" target="<?= $section_6['button']['target'] ?>" class="btn btn-primary text-white fw-600 px-4 rounded-pill"><?= $section_6['button']['title'] ?></a>
+                        <?php if (!empty($section_6['button'])) : ?>
+                            <a href="<?= $section_6['button']['url'] ?>" target="<?= $section_6['button']['target'] ?>" class="btn btn-primary text-white fw-600 px-4 rounded-pill"><?= $section_6['button']['title'] ?></a>
+                        <?php endif; ?>
                     </div>
                 </section>
             </div>
@@ -206,7 +209,81 @@ $section_8 = get_field('section_8');
 
         <?php if ($section_8['display'] == 'Visible') : ?>
             <div class="order-<?= $section_8['order'] ?>">
-                <section class="section_8"></section>
+                <section class="section_8 bg-primary text-white">
+                    <div class="container">
+                        <div class="fs-50 fw-600 lh-1"><?= $section_8['heading'] ?></div>
+                        <div class="description"><?= $section_8['description'] ?></div>
+                        <?php
+                        if (have_rows('section_8')) :
+                            while (have_rows('section_8')) : the_row();
+                                if (have_rows('list')) :
+                                    $index = 1;
+                                    while (have_rows('list')) : the_row();
+                        ?>
+                                        <div class="list_card">
+                                            <div class="row align-items-center">
+                                                <div class="col-lg-2">
+                                                    <div class="index text-center"><?= $index ?></div>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="fs-20 fw-600 lh-2"><?= get_sub_field('title') ?></div>
+                                                    <div class="fs-20 fw-400 lh-1_6"><?= get_sub_field('description') ?></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                        <?php
+                                        $index++;
+                                    endwhile;
+                                endif;
+                            endwhile;
+                        endif;
+                        ?>
+                        <?php if (!empty($section_8['description'])) : ?>
+                            <div class="description"><?= $section_8['description'] ?></div>
+                        <?php endif; ?>
+                        <?php if (!empty($section_8['button'])) : ?>
+                            <a href="<?= $section_8['button']['url'] ?>" target="<?= $section_8['button']['target'] ?>" class="btn btn-secondary text-white fw-600 px-4 rounded-pill"><?= $section_8['button']['title'] ?></a>
+                        <?php endif; ?>
+                    </div>
+                </section>
+            </div>
+        <?php endif; ?>
+
+        <?php if ($section_9['display'] == 'Visible') : ?>
+            <div class="order-<?= $section_9['order'] ?>">
+                <section class="section_9 py-7">
+                    <div class="container">
+                        <div class="fs-50 lh-1 fw-600 text-primary"><?= $section_9['heading'] ?></div>
+                        <?php if (!empty($section_9['description'])) : ?>
+                            <div class="description"><?= $section_9['description'] ?></div>
+                        <?php endif; ?>
+                        <?php if (have_rows('section_9')) :
+                            while (have_rows('section_9')) : the_row();
+                                if (have_rows('list')) :
+                        ?>
+                                    <div class="row gy-4">
+                                        <?php while (have_rows('list')) : the_row(); ?>
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="list_card">
+                                                <img src="<?= get_sub_field('image')['url'] ?>" alt="<?= get_sub_field('image')['alt'] ?>">
+                                                <div class="caption"><?= get_sub_field('title') ?></div>
+                                            </div>
+                                        </div>
+                                        <?php endwhile; ?>
+                                    </div>
+                        <?php
+                                endif;
+                            endwhile;
+                        endif;
+                        ?>
+                        <?php if (!empty($section_9['description_2'])) : ?>
+                            <div class="description"><?= $section_9['description_2'] ?></div>
+                        <?php endif; ?>
+                        <?php if (!empty($section_9['button'])) : ?>
+                            <a href="<?= $section_9['button']['url'] ?>" target="<?= $section_9['button']['target'] ?>" class="btn btn-primary text-white fw-600 px-4 rounded-pill"><?= $section_9['button']['title'] ?></a>
+                        <?php endif; ?>
+                    </div>
+                </section>
             </div>
         <?php endif; ?>
     </div>
