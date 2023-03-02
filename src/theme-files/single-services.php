@@ -130,7 +130,62 @@ $section_8 = get_field('section_8');
 
         <?php if ($section_6['display'] == 'Visible') : ?>
             <div class="order-<?= $section_6['order'] ?>">
-                <section class="section_6"></section>
+                <section class="section_6 bg-secondary text-white">
+                    <div class="container">
+                        <div class="row justify-content-between align-items-center">
+                            <div class="col-lg-7">
+                                <div class="fs-50 lh-1 fw-600"><?= $section_6['heading'] ?></div>
+                                <div class="description"><?= $section_6['description'] ?></div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="section_image"><img src="<?= $section_6['image']['url'] ?>" class="w-100" alt="<?= $section_6['image']['alt'] ?>"></div>
+                            </div>
+                        </div>
+
+                        <?php
+                        if (have_rows('section_6')) :
+                            while (have_rows('section_6')) : the_row();
+                                if (have_rows('list')) :
+                        ?>
+                                    <div class="row py-5">
+                                        <?php while (have_rows('list')) : the_row(); ?>
+                                            <div class="col-4 text-center">
+                                                <div class="pb-2"><img src="<?= get_sub_field('icon')['url'] ?>" alt="<?= get_sub_field('icon')['alt'] ?>"></div>
+                                                <div class="fs-20 pt-4 fw-600"><?= get_sub_field('title') ?></div>
+                                            </div>
+                                        <?php endwhile; ?>
+                                    </div>
+                        <?php
+                                endif;
+                            endwhile;
+                        endif;
+                        ?>
+
+                        <?php if (!empty($section_6['description_2'])) : ?>
+                            <div class="description"><?= $section_6['description_2'] ?></div>
+                        <?php endif; ?>
+                    </div>
+                    <?php
+                    if (have_rows('section_6')) :
+                        while (have_rows('section_6')) : the_row();
+                            if (have_rows('brands')) : ?>
+                                <div class="brand_slider" id="brand_slider">
+                                    <?php while (have_rows('brands')) : the_row(); ?>
+                                    <div><img src="<?= get_sub_field('brand')['url'] ?>" alt="<?= get_sub_field('brand')['alt'] ?>"></div>
+                                    <?php endwhile; ?>
+                                </div>
+                    <?php
+                            endif;
+                        endwhile;
+                    endif;
+                    ?>
+                    <div class="container">
+                        <?php if (!empty($section_6['description_3'])) : ?>
+                            <div class="description"><?= $section_6['description_3'] ?></div>
+                        <?php endif; ?>
+                        <a href="<?= $section_6['button']['url'] ?>" target="<?= $section_6['button']['target'] ?>" class="btn btn-primary text-white fw-600 px-4 rounded-pill"><?= $section_6['button']['title'] ?></a>
+                    </div>
+                </section>
             </div>
         <?php endif; ?>
 

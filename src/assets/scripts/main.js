@@ -14,6 +14,13 @@ jQuery(function ($) {
                         centerMode: true,
                         arrows: true,
                     });
+
+                    $("#brand_slider").slick({
+                        slidesToShow: 8,
+                        slidesToScroll: 1,
+                        infinite: true,
+                        autoplay: true,
+                    });
                 });
             }, // end misc
         }, // end ui

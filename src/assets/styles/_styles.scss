@@ -416,16 +416,34 @@ header {
         }
     }
 
-    section.section_3 {
+    section.section_3, section.section_4, section.section_6 {
         padding: 94px 0;
     }
 
     section.section_4 {
-        padding: 94px 0;
-
         .list_card {
             img {
                 height: 282px;
+            }
+        }
+    }
+
+    section.section_6 {
+        .section_image::before {
+            border-color: $primary;
+        }
+
+        .brand_slider {
+            background-color: $primary;
+            .slick-track {
+                display: flex;
+            }
+
+            .slick-slide {
+                height: inherit;
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
         }
     }
