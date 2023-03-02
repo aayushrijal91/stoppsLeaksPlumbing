@@ -1,5 +1,25 @@
 section.service_listing {
     padding: 92px 0;
+
+    &.primary {
+        background: $white;
+
+        .heading {
+            color: $primary;
+        }
+    }
+
+    &.secondary {
+        background: $secondary;
+        color: $white;
+
+        .heading {
+        }
+    }
+
+    .subheading span {
+        font-weight: 600;
+    }
 }
 
 section.general_cta {

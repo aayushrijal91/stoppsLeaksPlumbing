@@ -478,7 +478,8 @@ header {
                 font-size: 231px;
                 line-height: 0.8;
                 font-weight: 600;
-                color: #2E3192;
+                color: $primary;
+                opacity: 0.5;
             }
         }
     }

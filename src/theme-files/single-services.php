@@ -351,7 +351,7 @@ $section_12 = get_field('section_12');
                             <div class="col-lg-5" data-aos="fade-right">
                                 <div class="section_image"><img src="<?= $section_12['image']['url'] ?>" class="w-100" alt="<?= $section_12['image']['alt'] ?>"></div>
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-lg-6" data-aos="fade-left">
                                 <div class="fs-50 fw-600 lh-1"><?= $section_12['heading'] ?></div>
                                 <div class="description"><?= $section_12['description'] ?></div>
                             </div>
@@ -382,5 +382,7 @@ $section_12 = get_field('section_12');
             </div>
         <?php endif; ?>
     </div>
+
+    <?php get_template_part('parts/section', 'servicesListing') ?>
 </div>
 <?php get_footer(); ?>
