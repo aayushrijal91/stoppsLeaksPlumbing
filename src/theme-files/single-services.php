@@ -110,7 +110,9 @@ $section_8 = get_field('section_8');
                         <?php if (!empty($section_4['secondary_description'])) : ?>
                             <div class="description py-4"><?= $section_4['secondary_description'] ?></div>
                         <?php endif; ?>
-                        <a href="<?= $section_4['button']['url'] ?>" target="<?= $section_4['button']['target'] ?>" class="btn <?= ($section_4['theme'] == 'Light') ? 'btn-primary' : 'btn-secondary'; ?> text-white rounded-pill px-4 fw-600"><?= $section_4['button']['title'] ?></a>
+                        <?php if (!empty($section_4['button'])) : ?>
+                            <a href="<?= $section_4['button']['url'] ?>" target="<?= $section_4['button']['target'] ?>" class="btn <?= ($section_4['theme'] == 'Light') ? 'btn-primary' : 'btn-secondary'; ?> text-white rounded-pill px-4 fw-600"><?= $section_4['button']['title'] ?></a>
+                        <?php endif; ?>
                     </div>
                 </section>
             </div>
@@ -122,7 +124,9 @@ $section_8 = get_field('section_8');
                     <div class="container">
                         <div class="fs-50 fw-600 text-primary pb-2"><?= $section_5['heading'] ?></div>
                         <div class="description"><?= $section_5['description'] ?></div>
-                        <a href="<?= $section_5['button']['url'] ?>" target="<?= $section_5['button']['target'] ?>" class="btn btn-primary rounded-pill px-4 fw-600"><?= $section_5['button']['title'] ?></a>
+                        <?php if (!empty($section_5['button'])) : ?>
+                            <a href="<?= $section_5['button']['url'] ?>" target="<?= $section_5['button']['target'] ?>" class="btn btn-primary rounded-pill px-4 fw-600"><?= $section_5['button']['title'] ?></a>
+                        <?php endif; ?>
                     </div>
                 </section>
             </div>
@@ -171,7 +175,7 @@ $section_8 = get_field('section_8');
                             if (have_rows('brands')) : ?>
                                 <div class="brand_slider" id="brand_slider">
                                     <?php while (have_rows('brands')) : the_row(); ?>
-                                    <div><img src="<?= get_sub_field('brand')['url'] ?>" alt="<?= get_sub_field('brand')['alt'] ?>"></div>
+                                        <div><img src="<?= get_sub_field('brand')['url'] ?>" alt="<?= get_sub_field('brand')['alt'] ?>"></div>
                                     <?php endwhile; ?>
                                 </div>
                     <?php
@@ -191,7 +195,12 @@ $section_8 = get_field('section_8');
 
         <?php if ($section_7['display'] == 'Visible') : ?>
             <div class="order-<?= $section_7['order'] ?>">
-                <section class="section_7"></section>
+                <section class="section_7 text-white">
+                    <div class="container">
+                        <div class="fs-50 fw-600 pb-2"><?= $section_7['heading'] ?></div>
+                        <div class="description pt-4 pb-0"><?= $section_7['description'] ?></div>
+                    </div>
+                </section>
             </div>
         <?php endif; ?>
 

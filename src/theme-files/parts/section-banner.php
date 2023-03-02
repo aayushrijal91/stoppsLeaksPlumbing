@@ -11,7 +11,7 @@ if (!empty(get_field('banner')['heading']) && !is_home()) {
 
 if (!empty($heading)) :
 ?>
-    <header class="lazyload<?= (is_front_page() && is_page()) ? ' homepage': '' ?><?= (!is_front_page() && is_page()) ? ' page': '' ?><?= (is_single()) ? ' servicePage': '' ?>" data-src="<?= $coverImg['url'] ?>">
+    <header class="<?= (is_front_page() && is_page()) ? ' homepage': '' ?><?= (!is_front_page() && is_page()) ? ' page': '' ?><?= (is_single()) ? ' servicePage': '' ?>" style="background-image: url('<?= $coverImg['url'] ?>');">
         <div class="container">
             <div class="row<?= is_front_page() ? ' justify-content-end' : '' ?>">
                 <div class="<?= is_front_page() ? 'col-lg-10 text-end' : 'col-lg-9' ?>">

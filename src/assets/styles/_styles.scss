@@ -447,6 +447,11 @@ header {
             }
         }
     }
+
+    section.section_7 {
+        padding: 80px 0;
+        background: $primary imgUrl('pipes-secondary.png') right center;
+    }
 }
 
 .footer_top {
