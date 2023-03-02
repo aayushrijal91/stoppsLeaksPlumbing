@@ -415,6 +415,20 @@ header {
             padding: 8px 60px;
         }
     }
+
+    section.section_3 {
+        padding: 94px 0;
+    }
+
+    section.section_4 {
+        padding: 94px 0;
+
+        .list_card {
+            img {
+                height: 282px;
+            }
+        }
+    }
 }
 
 .footer_top {
