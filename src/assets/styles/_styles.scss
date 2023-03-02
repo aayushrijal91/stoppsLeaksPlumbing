@@ -403,7 +403,8 @@ header {
         .service_card {
             background: $secondary;
             border-radius: 10px;
-            height: 117px;
+            min-height: 160px;
+            height: 100%;
             color: $white;
             font-size: 1.25rem;
             font-weight: 500;
@@ -411,14 +412,15 @@ header {
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding: 8px 60px;
+            padding: 16px 54px;
         }
     }
 
     section.section_3,
     section.section_4,
     section.section_6,
-    section.section_8 {
+    section.section_8,
+    section.section_10 {
         padding: 94px 0;
     }
 
@@ -453,7 +455,16 @@ header {
 
     section.section_7 {
         padding: 80px 0;
-        background: $primary imgUrl('pipes-secondary.png') right center;
+
+        &.primary {
+            background: $primary imgUrl('pipes-secondary.png') right center;
+        }
+
+        &.secondary {
+            background: $secondary imgUrl('pipes-primary.png') right center;
+        }
+
+        background-size: contain;
     }
 
     section.section_8 {
@@ -492,6 +503,33 @@ header {
                 justify-content: center;
                 color: $white;
                 font-size: 1.25rem;
+            }
+        }
+    }
+
+    section.section_11 {
+        padding: 76px 0;
+    }
+
+    section.section_12 {
+        padding: 125px 0;
+
+        .list_card {
+            border-radius: 10px;
+            background: $secondary;
+            color: $white;
+            padding: 29px 42px;
+            margin: 22px 0;
+            display: flex;
+            align-items: center;
+
+            .index {
+                font-size: 50px;
+                line-height: 1;
+                font-weight: 600;
+                color: $primary;
+                opacity: 0.5;
+                gap: 31px;
             }
         }
     }
