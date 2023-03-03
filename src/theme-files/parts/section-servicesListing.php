@@ -52,6 +52,11 @@ if (!empty($services['heading'])) : ?>
                     </div>
                 <?php endif; ?>
             </div>
+
+            <?php if (!empty($services['short_text'])) : ?>
+                <div class="fs-20 lh-1 pb-5"><?= $services['short_text'] ?></div>
+            <?php endif; ?>
+
             <?php if (!empty($services['main_button'])) : ?>
                 <a href="<?= $services['main_button']['url'] ?>" class="btn btn-primary rounded-pill fw-600 px-4" target="<?= $services['main_button']['target'] ?>"><?= $services['main_button']['title'] ?></a>
             <?php endif; ?>
