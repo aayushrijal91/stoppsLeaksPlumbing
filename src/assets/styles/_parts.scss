@@ -20,6 +20,10 @@ section.service_listing {
     .subheading span {
         font-weight: 600;
     }
+
+    .featured_image {
+        background: imgUrl('service-pipe.png') right center $secondary;
+    }
 }
 
 section.general_cta {

@@ -39,7 +39,7 @@ if (!empty($services['heading'])) : ?>
                 <?php if ($services['show_cta'] == 'Visible') : ?>
                     <div class="col">
                         <div class="service_card">
-                            <div class="featured_image bg-secondary px-5 d-flex align-items-center text-white">
+                            <div class="featured_image px-5 d-flex align-items-center text-white">
                                 <div>
                                     <div class="fs-35 fw-600 lh-1">We Would love to hear from you!</div>
                                     <div class="fs-20 pt-2 pb-5">Why not give us a call on <a href="tel:<?= get_field('mobile_number', 'option') ?>" class="text-white fw-600"><?= get_field('mobile_number', 'option') ?></a> or <a href="tel:<?= get_field('phone_number', 'option') ?>" class="text-white fw-600"><?= get_field('phone_number', 'option') ?></a></div>
