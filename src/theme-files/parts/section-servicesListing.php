@@ -11,13 +11,18 @@ if (!empty($services['heading'])) : ?>
             <div class="row py-6 services gy-6">
                 <?php
                 $args = array(
+                    'post_type'      => 'page',
                     'posts_per_page' => -1,
-                    'post_type' => 'services',
                     'post__not_in' => array(get_the_ID()),
-                    'orderby' => 'menu_order',
-                    'order' => 'ASC',
+                    'order'          => 'ASC',
+                    'orderby'        => 'publish_date',
+                    'meta_query' => array(
+                        array(
+                            'key' => '_wp_page_template',
+                            'value' => 'page-templates/service.php'
+                        )
+                    )
                 );
-
                 $the_query = new WP_Query($args);
                 if ($the_query->have_posts()) :
                     while ($the_query->have_posts()) :

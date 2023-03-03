@@ -63,12 +63,17 @@
                             <ul class="menu menu_services">
                                 <?php
                                 $args = array(
+                                    'post_type'      => 'page',
                                     'posts_per_page' => -1,
-                                    'post_type' => 'services',
-                                    'orderby' => 'menu_order',
-                                    'order' => 'ASC',
+                                    'order'          => 'ASC',
+                                    'orderby'        => 'publish_date',
+                                    'meta_query' => array(
+                                        array(
+                                            'key' => '_wp_page_template',
+                                            'value' => 'page-templates/service.php'
+                                        )
+                                    )
                                 );
-
                                 $the_query = new WP_Query($args);
                                 if ($the_query->have_posts()) :
                                     while ($the_query->have_posts()) :
