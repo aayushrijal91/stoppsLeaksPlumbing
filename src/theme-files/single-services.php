@@ -14,6 +14,7 @@ $section_9 = get_field('section_9');
 $section_10 = get_field('section_10');
 $section_11 = get_field('section_11');
 $section_12 = get_field('section_12');
+$section_13 = get_field('section_13');
 ?>
 <div class="inner_service">
     <div class="d-flex flex-column">
@@ -377,6 +378,60 @@ $section_12 = get_field('section_12');
                             endwhile;
                         endif;
                         ?>
+                    </div>
+                </section>
+            </div>
+        <?php endif; ?>
+
+        <?php if ($section_13['display'] == 'Visible') : ?>
+            <div class="order-<?= $section_13['order'] ?>">
+                <section class="section_13 bg-primary text-white">
+                    <div class="container">
+                        <div class="fs-50 lh-1 fw-600"><?= $section_13['heading'] ?></div>
+                        <div class="description"><?= $section_13['description'] ?></div>
+                        <div class="accordion-container">
+                            <?php
+                            if (have_rows('section_13')) :
+                                while (have_rows('section_13')) : the_row();
+                                    if (have_rows('accordion')) :
+                                        $index = 1;
+                                        while (have_rows('accordion')) : the_row();
+                                            $question = get_sub_field('title');
+                                            $answer = get_sub_field('description');
+                            ?>
+                                            <div class="accordion-card">
+                                                <div class="accordion-head<?= ($index == 1) ? " active" : ""; ?>">
+                                                    <div class="row g-0 w-100 justify-content-between align-items-center">
+                                                        <div class="col h-inherit">
+                                                            <?= $question ?>
+                                                        </div>
+                                                        <div class="col-auto h-inherit">
+                                                            <div class="plusminus">
+                                                                <?php if ($index == 1) { ?>
+                                                                    <svg width="9" height="4" viewBox="0 0 9 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="M8.79759 0.950905V3.34224H0.414062V0.950905H8.79759Z" fill="white" />
+                                                                    </svg>
+                                                                <?php } else { ?>
+                                                                    <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="M5.10449 13.4713V0.988392H7.58816V13.4713H5.10449ZM0.109464 8.46709V5.98342H12.5924V8.46709H0.109464Z" fill="white" />
+                                                                    </svg>
+                                                                <?php } ?>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-body" style="<?= ($index == 1) ? 'display: block;' : ''; ?>">
+                                                    <?= $answer ?>
+                                                </div>
+                                            </div>
+                            <?php
+                                            $index++;
+                                        endwhile;
+                                    endif;
+                                endwhile;
+                            endif;
+                            ?>
+                        </div>
                     </div>
                 </section>
             </div>
