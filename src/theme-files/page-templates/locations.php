@@ -46,18 +46,16 @@ if ($the_query->have_posts()) {
                         $count = 0;
                     ?>
                         <ul class="areasWrapper">
+                            <li class="border"></li>
+                            <li class="border"></li>
+                            <li class="border"></li>
+                        </ul>
+                        <ul class="areasWrapper">
                             <?php foreach (range('A', 'Z') as $char) {
                                 if (isset($htm3[$char]) && $htm3[$char] != '') {
                             ?>
                                     <li class="areaCharacterGrouping char<?= $char ?> <?php echo ($count > 5) ? 'arealisthide' : ''; ?> ">
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="areaCharacter fs-20 fw-600"><?= $char ?></div>
-                                            <a href="javascript:void(0)" class="showAreasButton">
-                                                <svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M1.41406 2.24475L7.06182 8.40594L12.7096 2.24475" stroke="#D9D9D9" stroke-width="2.56716" stroke-linecap="round" stroke-linejoin="round" />
-                                                </svg>
-                                            </a>
-                                        </div>
+                                        <div class="areaCharacter fs-20 fw-600"><?= $char ?></div>
                                         <ul class="arealist">
                                             <?php echo $htm3[$char]; ?>
                                         </ul>

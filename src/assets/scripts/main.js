@@ -57,13 +57,6 @@ jQuery(function ($) {
                     }, 1000);
                     return false;
                 });
-
-                $('.showAreasButton').on('click', function() {
-                    $('ul.arealist').slideUp();
-                    $('.areaCharacter').css('color', '#ffffff');
-                    $(this).siblings('.areaCharacter').css('color','#3498DB')    
-                    $(this).parents('li.areaCharacterGrouping').find('ul.arealist').slideDown();
-                });
             }, // end misc
         }, // end ui
         //utils: {
