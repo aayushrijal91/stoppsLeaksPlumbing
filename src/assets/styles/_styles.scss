@@ -390,7 +390,107 @@ header {
     }
 }
 
-.locations {}
+.locations {
+    section.areas {
+        padding: 3.25rem 0;
+
+        @media screen and (max-width: 576px) {
+            padding: 2.75rem 0;
+        }
+
+        ul.areasWrapper {
+            column-count: 3;
+            column-gap: 205px;
+            padding-inline-start: 0;
+            margin-bottom: 0;
+
+            li.areaCharacterGrouping {
+                list-style: none;
+                border-bottom: 2px solid $white;
+                padding: 30px 0;
+
+                ul.arealist {
+                    display: none;
+                    margin-top: 34px;
+                    margin-bottom: 0;
+
+                    li {
+                        list-style: disc;
+                        padding: 0.25rem 0;
+
+                        a {
+                            color: $white;
+
+                            &:hover {
+                                color: $secondary;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    div.areas_droplist {
+        position: relative;
+        z-index: 9;
+    }
+
+    div.areas_droplist>div.caption {
+        border: 1px solid #c4c4c4;
+        padding: 11px 24px;
+        border-radius: 0;
+        cursor: pointer;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            right: 0.5rem;
+            top: 35%;
+            border: solid $primary;
+            border-width: 0 3px 3px 0;
+            display: inline-block;
+            padding: 3px;
+            transform: rotate(45deg);
+            transition: all 0.35s ease;
+        }
+    }
+
+    div.areas_droplist>div.list {
+        position: absolute;
+        background-color: #f2f2f2;
+        width: 100%;
+        border-radius: 0 0 3px 3px;
+        display: none;
+    }
+
+    div.areas_droplist>div.list>div.item {
+        padding: 11px 24px;
+        background-color: #cecece;
+        cursor: pointer;
+    }
+
+    div.areas_droplist>div.list>div.item.selected {
+        font-weight: bold;
+    }
+
+    div.areas_droplist>div.caption:hover,
+    div.areas_droplist>div.list>div.item:hover {
+        background-color: $primary;
+        color: #fff;
+    }
+
+    div.areas_droplist.open>div.caption {
+        border-radius: 3px 3px 0 0;
+        border-bottom: solid 1px #999;
+    }
+
+    div.areas_droplist.open>div.list {
+        display: block;
+        z-index: 99;
+    }
+}
 
 .inner_service {
     section.section_1 {

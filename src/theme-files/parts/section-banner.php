@@ -7,6 +7,8 @@ if (!empty(get_field('banner')['heading']) && !is_home()) {
     $coverImg = get_field('banner')['cover_image'];
     $button = get_field('banner')['button'];
     $colorPreference = get_field('banner')['heading_color_preference'];
+} else if(get_page_template('page-templates/suburb.php')) {
+    $heading = "test";
 }
 
 if (!empty($heading)) :
