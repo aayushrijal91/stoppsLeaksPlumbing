@@ -6,10 +6,10 @@ if (!empty($cta['heading'])) : ?>
                 <div class="fs-75 fw-600 lh-0_86"><?= $cta['heading'] ?></div>
                 <div class="description"><?= $cta['description'] ?></div>
                 <div class="row">
-                    <div class="col-auto">
+                    <div class="col-auto d-none d-md-block">
                         <a href="tel:<?= get_field('phone_number', 'option') ?>" class="btn bordered border-white rounded-pill text-white px-4 fw-600"><?= get_field('phone_number', 'option') ?></a>
                     </div>
-                    <div class="col-auto">
+                    <div class="col-auto d-none d-md-block">
                         <a href="tel:<?= get_field('mobile_number', 'option') ?>" class="btn bordered border-white rounded-pill text-white px-4 fw-600"><?= get_field('mobile_number', 'option') ?></a>
                     </div>
                     <div class="col-auto">

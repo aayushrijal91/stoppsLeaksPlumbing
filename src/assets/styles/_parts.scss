@@ -51,14 +51,14 @@ section.service_listing {
                 height: 395px;
                 overflow: hidden;
                 border-radius: 10px;
-        
+
                 img {
                     width: 100%;
                     height: 100%;
                     object-fit: cover;
                     object-position: center;
                 }
-    
+
                 @include media-breakpoint-down(sm) {
                     height: 327px;
                 }
@@ -72,10 +72,19 @@ section.service_listing {
 }
 
 section.general_cta {
-    padding: 94px 0;
+    padding: 45px 0;
+
+    @include media-breakpoint-up(md) {
+        padding: 94px 0;
+    }
 
     .general_cta_inner {
-        padding: 86px 60px;
+        padding: 63px 24px;
+
+        @include media-breakpoint-up(md) {
+            padding: 86px 60px;
+        }
+
         background: $primary imgUrl('pipes-secondary.png') right center;
         border-radius: 10px;
         color: $white;

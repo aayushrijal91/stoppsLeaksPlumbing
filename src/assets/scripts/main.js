@@ -45,6 +45,10 @@ jQuery(function ($) {
                             arrows: false,
                             dots: true
                         });
+
+                        $('.mobile_footer_link_header').on('click', function() {
+                            $(this).next('.footer_menu').slideToggle();
+                        })
                     }
                 });
 

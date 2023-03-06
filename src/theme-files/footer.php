@@ -2,7 +2,28 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-4">
-                <div><img src="<?= get_field('footer_logo', 'options')['url'] ?>" alt="<?= get_field('footer_logo', 'options')['url'] ?>"></div>
+                <div class="row justify-content-between align-items-center">
+                    <div class="col-4 col-md-12">
+                        <a href="<?= home_url() ?>"><img src="<?= get_field('footer_logo', 'options')['url'] ?>" alt="<?= get_field('footer_logo', 'options')['url'] ?>"></a>
+                    </div>
+                    <div class="col-4 d-md-none">
+                        <div class="row">
+                            <?php if (have_rows('socials', 'option')) :
+                                while (have_rows('socials', 'option')) : the_row();
+                                    $icon = get_sub_field('icon');
+                            ?>
+                                    <div class="col-auto">
+                                        <a href="<?= get_sub_field('url') ?>" target="_blank">
+                                            <img src="<?= $icon['url'] ?>" alt="<?= $icon['alt'] ?>">
+                                        </a>
+                                    </div>
+                            <?php
+                                endwhile;
+                            endif;
+                            ?>
+                        </div>
+                    </div>
+                </div>
                 <div class="fw-500 text-white row flex-column gy-3 py-5">
                     <div class="d-flex align-items-center gap-2">
                         <div>
@@ -29,7 +50,7 @@
                         <div><?= get_field('mobile_number', 'option') ?></div>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row d-none d-md-flex">
                     <?php if (have_rows('socials', 'option')) :
                         while (have_rows('socials', 'option')) : the_row();
                             $icon = get_sub_field('icon');
@@ -45,10 +66,17 @@
                     ?>
                 </div>
             </div>
-            <div class="col">
+            <div class="col-md">
                 <div class="row">
-                    <div class="col-3">
-                        <div class="fs-20 fw-700 pb-3">Quick Links</div>
+                    <div class="col-md-3">
+                        <a href="javascript:void(0)" class="mobile_footer_link_header py-3">
+                            <div class="fs-20 fw-600 text-white">Quick Links</div>
+                            <div class="d-md-none">
+                                <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11 1L6 6L1 1" stroke="#3498DB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                        </a>
                         <?php wp_nav_menu(array(
                             'menu' => 'Quick Links',
                             'item_class' => 'nav-item',
@@ -57,8 +85,15 @@
                             'container_id' => '',
                         )); ?>
                     </div>
-                    <div class="col">
-                        <div class="fs-20 fw-700 pb-3">Services</div>
+                    <div class="col-md">
+                        <a href="javascript:void(0)" class="mobile_footer_link_header py-3">
+                            <div class="fs-20 fw-600 text-white">Services</div>
+                            <div class="d-md-none">
+                                <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11 1L6 6L1 1" stroke="#3498DB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                        </a>
                         <div class="footer_menu">
                             <ul class="menu menu_services">
                                 <?php
@@ -90,7 +125,14 @@
                         </div>
                     </div>
                     <div class="col-lg-auto">
-                        <div class="fs-20 fw-700 pb-3">Support</div>
+                        <a href="javascript:void(0)" class="mobile_footer_link_header py-3">
+                            <div class="fs-20 fw-600 text-white">Support</div>
+                            <div class="d-md-none">
+                                <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11 1L6 6L1 1" stroke="#3498DB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                        </a>
                         <?php wp_nav_menu(array(
                             'menu' => 'Footer Support',
                             'item_class' => 'nav-item',
@@ -107,8 +149,13 @@
 
 <footer class="bg-dark py-4 text-light-grey">
     <div class="container">
-        <div class="row justify-content-between align-items-center">
-            <div class="col-auto fs-12">
+        <div class="row justify-content-center justify-content-md-between align-items-center gy-5 gy-md-0">
+            <div class="col-md-auto fs-12 d-md-none text-center">
+                Copyright <?= date('Y') ?>
+                <span class="text-secondary px-4">|</span>
+                Stopps Plumbing
+            </div>
+            <div class="col-auto fs-12 d-none d-md-block">
                 Copyright <?= date('Y') ?>
                 <span class="text-secondary px-4">|</span>
                 Stopps Plumbing
