@@ -17,15 +17,15 @@ if (!empty(get_field('banner')['heading']) && !is_home()) {
 
 if (!empty($heading)) :
 ?>
-    <header class="<?= (is_front_page() && is_page()) ? ' homepage' : '' ?><?= (!is_front_page() && is_page()) ? ' page' : '' ?><?= (is_single()) ? ' servicePage' : '' ?><?= (get_page_template('page-templates/suburb.php')) ? ' suburbPage' : '' ?>" style="background-image: url('<?= $coverImg ?>');">
+    <header class="<?= (is_front_page() && is_page()) ? 'homepage' : '' ?><?= (!is_front_page() && is_page()) ? ' page' : '' ?><?= (is_single()) ? ' servicePage' : '' ?><?= (is_page_template('page-templates/suburb.php')) ? ' suburbPage' : '' ?>" style="background-image: url('<?= $coverImg ?>');">
         <div class="container">
             <div class="row<?= is_front_page() ? ' justify-content-end' : '' ?>">
-                <div class="<?= is_front_page() ? 'col-lg-10 text-end' : 'col-lg-9' ?>">
+                <div class="<?= is_front_page() ? 'col-lg-10 text-md-end' : 'col-lg-9' ?>">
                     <h1 class="fs-75 <?= $colorPreference == 'Light' ? 'text-white' : 'text-primary' ?> fw-600 lh-0_86"><?= $heading ?></h1>
                 </div>
             </div>
             <?php if (!empty($button)) { ?>
-                <div class="row justify-content-end pt-6">
+                <div class="row justify-content-md-end pt-6">
                     <div class="col-auto">
                         <a href="<?= $button['url'] ?>" target="<?= $button['target'] ?>" class="btn btn-primary rounded-pill text-white px-4 fw-600">
                             <?= $button['title'] ?>

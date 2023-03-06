@@ -8,6 +8,14 @@ jQuery(function ($) {
                     duration: 1500,
                 });
 
+                $('#close-slidenav').on('click', function () {
+                    $('.slide-nav').removeClass('nav-open');
+                });
+
+                $('#triggerSlideNav').on('click', function () {
+                    $('.slide-nav').addClass('nav-open');
+                });
+
                 $(() => {
                     $("#reviews_slider").slick({
                         slidesToShow: 3,
@@ -22,6 +30,22 @@ jQuery(function ($) {
                         infinite: true,
                         autoplay: true,
                     });
+
+                    if($(document).width() <= 540) {
+                        $("#services").slick({
+                            slidesToShow: 2,
+                            slidesToScroll: 1,
+                            arrows: false,
+                            autoplay: true,
+                        });
+
+                        $("#home_whyUs").slick({
+                            slidesToScroll: 1,
+                            slidesToShow: 1,
+                            arrows: false,
+                            dots: true
+                        });
+                    }
                 });
 
                 $(".accordion-head").on('click', function () {

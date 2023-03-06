@@ -1,7 +1,7 @@
 <?php $logo = get_field('logo', 'options'); ?>
 
 <div class="hero_nav">
-    <!-- <div class="slide-nav d-flex flex-column justify-content-between">
+    <div class="slide-nav d-flex flex-column justify-content-between">
         <div>
             <div class="d-flex">
                 <a href="javascript:void(0)" id="close-slidenav">
@@ -12,7 +12,7 @@
                 </a>
                 <div class="text-white fs-36 fw-700 text-uppercase px-4">Menu</div>
             </div>
-            <img src="<?= get_field('slide_nav_logo', 'options')['url'] ?>" class="py-5" alt="<?= get_field('slide_nav_logo', 'options')['alt'] ?>">
+            <img src="<?= $logo['url']; ?>" class="py-5" alt="<?= $logo['alt']; ?>">
             <?php wp_nav_menu(array(
                 'menu' => 'Primary Menu',
                 'menu_class' => 'navbar-nav',
@@ -39,9 +39,9 @@
                 </a>
             </div>
         </div>
-    </div> -->
+    </div>
     <div class="navigation">
-        <div class="container">
+        <div class="container d-none d-md-block">
             <div class="row justify-content-between align-items-center py-4">
                 <div class="col-auto">
                     <a class="navbar-brand m-0" href="<?= home_url() ?>"><img src="<?= $logo['url']; ?>" alt="<?= $logo['alt']; ?>" /></a>
@@ -64,10 +64,12 @@
                 </div>
             </div>
         </div>
-        <div class="bg-primary">
+        <div class="main_navigation">
             <div class="container">
                 <nav class="navbar navbar-expand-xl navbar-light py-3 py-md-4">
-                    <a href="javascript:void(0)" class="pe-4 d-xl-none" id="triggerSlideNav">
+                    <a class="navbar-brand m-0 d-md-none" href="<?= home_url() ?>"><img src="<?= $logo['url']; ?>" alt="<?= $logo['alt']; ?>" /></a>
+
+                    <a href="javascript:void(0)" class="d-xl-none" id="triggerSlideNav">
                         <svg width="32" height="24" viewBox="0 0 32 24" fill="#363F94" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M0 2C0 0.89543 0.89543 0 2 0H30C31.1046 0 32 0.89543 32 2C32 3.10457 31.1046 4 30 4H2C0.89543 4 0 3.10457 0 2Z" fill="#363F94" />
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M0 12C0 10.8954 0.89543 10 2 10H30C31.1046 10 32 10.8954 32 12C32 13.1046 31.1046 14 30 14H2C0.89543 14 0 13.1046 0 12Z" fill="#363F94" />

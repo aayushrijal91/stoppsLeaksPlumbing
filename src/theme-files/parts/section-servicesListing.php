@@ -8,7 +8,7 @@ if (!empty($services['heading'])) : ?>
             <div class="fs-20 pt-2 subheading">
                 <?= $services['sub_heading'] ?>
             </div>
-            <div class="row py-6 services gy-6">
+            <div class="row my-6 services gy-6" id="services">
                 <?php
                 $args = array(
                     'post_type'      => 'page',
@@ -32,7 +32,7 @@ if (!empty($services['heading'])) : ?>
                         <div class="col-md-6 col-lg-4">
                             <div class="service_card">
                                 <div class="featured_image"><img src="<?= $featured_img_url ?>" alt="featured"></div>
-                                <div class="pt-4"><a href="<?= get_the_permalink() ?>" class="fs-35 lh-1 fw-600 <?= $services['theme'] == 'Primary' ? 'text-primary' : 'text-white' ?>"><?= get_the_title() ?></a></div>
+                                <div class="pt-3 pt-md-4"><a href="<?= get_the_permalink() ?>" class="service_title lh-1 fw-600 <?= $services['theme'] == 'Primary' ? 'text-primary' : 'text-white' ?>"><?= get_the_title() ?></a></div>
                             </div>
                         </div>
                 <?php
@@ -42,7 +42,7 @@ if (!empty($services['heading'])) : ?>
                 ?>
 
                 <?php if ($services['show_cta'] == 'Visible') : ?>
-                    <div class="col">
+                    <div class="col d-none d-md-block">
                         <div class="service_card">
                             <div class="featured_image px-5 d-flex align-items-center text-white">
                                 <div>

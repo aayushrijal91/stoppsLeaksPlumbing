@@ -1,6 +1,14 @@
 section.service_listing {
     padding: 92px 0;
 
+    @include media-breakpoint-down(sm) {
+        padding: 66px 0;
+
+        .heading {
+            font-size: 27px !important;
+        }
+    }
+
     &.primary {
         background: $white;
 
@@ -12,13 +20,50 @@ section.service_listing {
     &.secondary {
         background: $secondary;
         color: $white;
+    }
 
-        .heading {
+    .subheading {
+        span {
+            font-weight: 600;
+        }
+
+        @include media-breakpoint-down(sm) {
+            font-size: 1.125rem !important;
         }
     }
 
-    .subheading span {
-        font-weight: 600;
+    .services {
+
+        .slick-slide {
+            margin: 0 6px;
+        }
+
+        .service_card {
+            .service_title {
+                font-size: 35px;
+
+                @include media-breakpoint-down(sm) {
+                    font-size: 1.125rem;
+                }
+            }
+
+            .featured_image {
+                height: 395px;
+                overflow: hidden;
+                border-radius: 10px;
+        
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                }
+    
+                @include media-breakpoint-down(sm) {
+                    height: 327px;
+                }
+            }
+        }
     }
 
     .featured_image {
@@ -28,7 +73,7 @@ section.service_listing {
 
 section.general_cta {
     padding: 94px 0;
-    
+
     .general_cta_inner {
         padding: 86px 60px;
         background: $primary imgUrl('pipes-secondary.png') right center;
