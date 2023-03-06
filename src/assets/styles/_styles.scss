@@ -730,24 +730,37 @@ header {
 .inner_service {
     section.section_1 {
         padding: 94px 0;
+
+        @include media-breakpoint-down(sm) {
+            padding: 62px 0 38px;
+        }
     }
 
     section.section_2 {
         padding: 87px 0 99px;
 
+        @include media-breakpoint-down(sm) {
+            padding: 64px 0;
+        }
+
         .service_card {
             background: $secondary;
             border-radius: 10px;
-            min-height: 160px;
+            min-height: 82px;
             height: 100%;
             color: $white;
-            font-size: 1.25rem;
+            font-size: 1rem;
             font-weight: 500;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             padding: 16px 54px;
+
+            @include media-breakpoint-up(md) {
+                font-size: 1.25rem;
+            min-height: 160px;
+            }
         }
     }
 
@@ -757,12 +770,26 @@ header {
     section.section_8,
     section.section_10 {
         padding: 94px 0;
+
+        @include media-breakpoint-down(sm) {
+            padding: 64px 0;
+        }
     }
 
     section.section_4 {
         .list_card {
+            .section_image::before {
+                border-color: $primary;
+            }
+
             img {
                 height: 282px;
+                object-fit: cover;
+
+                @include media-breakpoint-down(sm) {
+                    height: 178px;
+
+                }
             }
         }
     }
@@ -872,6 +899,10 @@ header {
 
     section.section_13 {
         padding: 86px 0;
+
+        @include media-breakpoint-down(sm) {
+            padding: 64px 0;
+        }
     }
 }
 

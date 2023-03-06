@@ -40,6 +40,16 @@ jQuery(function ($) {
                         slidesToScroll: 1,
                         infinite: true,
                         autoplay: true,
+                        responsive: [
+                            {
+                                breakpoint: 540,
+                                settings: {
+                                    slidesToShow: 2,
+                                    arrows: false,
+                                    dots: true
+                                }
+                            }
+                        ]
                     });
 
                     if($(document).width() <= 540) {

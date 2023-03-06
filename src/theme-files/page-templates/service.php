@@ -53,7 +53,7 @@ $section_13 = get_field('section_13');
                             while (have_rows('section_2')) : the_row();
                                 if (have_rows('services')) :
                         ?>
-                                    <div class="row py-5 g-4 justify-content-center">
+                                    <div class="row py-md-5 gy-3 gy-md-4 justify-content-center">
                                         <?php while (have_rows('services')) : the_row(); ?>
                                             <div class="col-md-6 col-lg-4">
                                                 <div class="service_card"><?= get_sub_field('service') ?></div>
@@ -78,17 +78,18 @@ $section_13 = get_field('section_13');
 
         <?php if ($section_3['display'] == 'Visible') : ?>
             <div class="order-<?= $section_3['order'] ?>">
-                <section class="section_3 bg-primary text-white">
+                <section class="section_3 <?= ($section_3['theme'] == 'Dark') ? 'bg-primary text-white' : 'bg-white' ?>">
                     <div class="container">
-                        <div class="row">
+                        <div class="row align-items-center">
                             <div class="col-lg-6" data-aos="fade-right">
-                                <div class="fs-50 fw-600 lh-1"><?= $section_3['heading'] ?></div>
+                                <div class="fs-50 fw-600 lh-1 <?= ($section_3['theme'] == 'Light') ? 'text-primary' : '' ?>"><?= $section_3['heading'] ?></div>
+                                <div class="section_image d-md-none mt-5"><img src="<?= $section_3['image']['url'] ?>" class="w-100" alt="<?= $section_3['image']['alt'] ?>"></div>
                                 <div class="description"><?= $section_3['description'] ?></div>
                                 <?php if (!empty($section_3['button'])) : ?>
-                                    <a href="<?= $section_3['button']['url'] ?>" target="<?= $section_3['button']['target'] ?>" class="btn btn-secondary rounded-pill px-4 fw-600 text-white"><?= $section_3['button']['title'] ?></a>
+                                    <a href="<?= $section_3['button']['url'] ?>" target="<?= $section_3['button']['target'] ?>" class="btn <?= ($section_3['theme'] == 'Dark') ? 'btn-secondary' : 'btn-primary' ?> rounded-pill px-4 fw-600 text-white"><?= $section_3['button']['title'] ?></a>
                                 <?php endif; ?>
                             </div>
-                            <div class="col-lg-6" data-aos="fade-left">
+                            <div class="col-lg-6 d-none d-md-block" data-aos="fade-left">
                                 <div class="section_image"><img src="<?= $section_3['image']['url'] ?>" class="w-100" alt="<?= $section_3['image']['alt'] ?>"></div>
                             </div>
                         </div>
@@ -108,11 +109,11 @@ $section_13 = get_field('section_13');
                             while (have_rows('section_4')) : the_row();
                                 if (have_rows('list')) :
                         ?>
-                                    <div class="row justify-content-center py-5 gy-4 gy-lg-0<?= ($section_4['theme'] == 'Light') ? ' gx-lg-5' : ''; ?>">
+                                    <div class="row justify-content-md-center py-md-5 gy-5 gy-md-4 gy-lg-0<?= ($section_4['theme'] == 'Light') ? ' gx-lg-5' : ''; ?>">
                                         <?php while (have_rows('list')) : the_row(); ?>
-                                            <div class="col-md-4 col-lg">
+                                            <div class="col-6 col-md-4 col-lg">
                                                 <div class="list_card">
-                                                    <img src="<?= get_sub_field('image')['url'] ?>" class="w-100 rounded-10" alt="<?= get_sub_field('image')['alt'] ?>">
+                                                    <div class="section_image"><img src="<?= get_sub_field('image')['url'] ?>" class="w-100 rounded-10" alt="<?= get_sub_field('image')['alt'] ?>"></div>
                                                     <div class="fw-500 fs-20 pt-3 <?= ($section_4['theme'] == 'Dark') ? 'text-white' : 'text-center text-primary'; ?>"><?= get_sub_field('title') ?></div>
                                                 </div>
                                             </div>
@@ -136,7 +137,7 @@ $section_13 = get_field('section_13');
 
         <?php if ($section_5['display'] == 'Visible') : ?>
             <div class="order-<?= $section_5['order'] ?>">
-                <section class="section_5 py-7">
+                <section class="section_5 py-5 py-md-7">
                     <div class="container">
                         <div class="fs-50 fw-600 text-primary pb-2"><?= $section_5['heading'] ?></div>
                         <div class="description"><?= $section_5['description'] ?></div>
@@ -167,9 +168,9 @@ $section_13 = get_field('section_13');
                             while (have_rows('section_6')) : the_row();
                                 if (have_rows('list')) :
                         ?>
-                                    <div class="row py-5">
+                                    <div class="row py-5 gy-5 gy-md-0">
                                         <?php while (have_rows('list')) : the_row(); ?>
-                                            <div class="col-4 text-center">
+                                            <div class="col-md-4 text-center">
                                                 <div class="pb-2"><img src="<?= get_sub_field('icon')['url'] ?>" alt="<?= get_sub_field('icon')['alt'] ?>"></div>
                                                 <div class="fs-20 pt-4 fw-600"><?= get_sub_field('title') ?></div>
                                             </div>
