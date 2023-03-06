@@ -5,12 +5,12 @@
 .hero_nav {
     .slide-nav {
         position: fixed;
-        background: $light-grey;
+        background: $grey;
         height: 100%;
         z-index: 100000000;
         width: 100%;
         padding: 50px;
-        color: $white;
+        color: $primary;
         font-weight: 500;
         font-size: 1.25rem;
         transform: translateX(-100%);
@@ -33,7 +33,7 @@
         }
 
         .nav-link {
-            font-size: 1.875rem;
+            font-size: 1.25rem;
             font-weight: 700;
         }
     }
