@@ -17,9 +17,10 @@ $section_1 = get_field('section_1');
                 <div class="row justify-content-between">
                     <div class="col-lg-6" data-aos="fade-right">
                         <div class="fs-50 fw-600 lh-1"><?= $section_1['heading'] ?></div>
+                        <div class="section_image mt-5 d-md-none"><img src="<?= $section_1['image']['url'] ?>" class="w-100" alt="<?= $section_1['image']['alt'] ?>"></div>
                         <div class="description"><?= $section_1['description'] ?></div>
                     </div>
-                    <div class="col-lg-5" data-aos="fade-left">
+                    <div class="col-lg-5 d-none d-md-block" data-aos="fade-left">
                         <div class="section_image"><img src="<?= $section_1['image']['url'] ?>" class="w-100" alt="<?= $section_1['image']['alt'] ?>"></div>
                     </div>
                 </div>
@@ -39,7 +40,7 @@ $section_1 = get_field('section_1');
                         <div class="review_slide">
                             <div class="initial"><?= substr($username, 0, 1) ?></div>
                             <div class="fs-20 fw-600 text-primary"><?= $username ?></div>
-                            <div class="fs-18 py-3 lh-2">
+                            <div class="comment py-3">
                                 <?= $comment ?>
                             </div>
                             <svg width="119" height="19" viewBox="0 0 119 19" fill="none" xmlns="http://www.w3.org/2000/svg">

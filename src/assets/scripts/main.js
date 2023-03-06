@@ -22,6 +22,17 @@ jQuery(function ($) {
                         slidesToScroll: 1,
                         centerMode: true,
                         arrows: true,
+                        autoplay: true,
+                        responsive: [
+                            {
+                                breakpoint: 540,
+                                settings: {
+                                    slidesToShow: 1,
+                                    arrows: false,
+                                    dots: true
+                                }
+                            }
+                        ]
                     });
 
                     $("#brand_slider").slick({

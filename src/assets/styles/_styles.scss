@@ -372,11 +372,15 @@ header {
             border-color: $primary !important;
         }
     }
-}
+}   
 
 .testimonials {
     section.section_1 {
         padding: 88px 0 64px;
+
+        @include media-breakpoint-down(sm) {
+            padding: 60px 0 10px;
+        }
     }
 
     section.reviews {
@@ -388,6 +392,35 @@ header {
                 display: flex;
             }
 
+            .slick-dots {
+                li {
+                    height: 8px;
+                    width: 8px;
+                    margin: 0 3.5px;
+
+                    button {
+                        height: 8px;
+                        width: 8px;
+                        background: $grey;
+                        border-radius: 50%;
+                        padding: 0;
+
+                        &::before {
+                            border-radius: 50%;
+                            height: 8px;
+                            width: 8px;
+                            content: "";
+                        }
+                    }
+
+                    &.slick-active {
+                        button::before {
+                            background: $primary;
+                        }
+                    }
+                }
+            }
+
             .slick-list {
                 padding: 0 !important;
             }
@@ -395,11 +428,14 @@ header {
             .slick-slide {
                 height: inherit;
                 margin: 0 17px;
-                transform: scale(0.8);
                 transition: 0.2s all;
 
-                &.slick-current.slick-center {
-                    transform: scale(1);
+                @include media-breakpoint-up(md) {
+                    transform: scale(0.8);
+    
+                    &.slick-current.slick-center {
+                        transform: scale(1);
+                    }
                 }
             }
 
@@ -412,8 +448,11 @@ header {
                 padding: 85px 27px 44px;
                 display: flex;
                 flex-direction: column;
-                text-transform: uppercase;
                 align-items: center;
+
+                @include media-breakpoint-down(sm) {
+                    padding: 85px 9px 44px;
+                }
 
                 .initial {
                     height: 124px;
@@ -431,6 +470,15 @@ header {
                     line-height: 1;
                     font-weight: 600;
                     border: 5px solid $white;
+                }
+
+                .comment {
+                    line-height: 1.5;
+
+                    @include media-breakpoint-up(md) {
+                        font-size: 1.125rem;
+                        line-height: 2;
+                    }
                 }
             }
 
