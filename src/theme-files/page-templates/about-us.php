@@ -19,7 +19,7 @@ $section_6 = get_field('section_6');
         <section class="section_1 bg-primary text-white">
             <div class="container">
                 <div class="row justify-content-between">
-                    <div class="col-lg-6 pe-lg-5" data-aos="fade-right">
+                    <div class="col-lg-6 pe-xl-5" data-aos="fade-right">
                         <div class="fs-50 fw-600 lh-1"><?= $section_1['heading'] ?></div>
                         <div class="section_image mt-5 mb-4 d-lg-none"><img src="<?= $section_1['image']['url'] ?>" class="w-100" alt="<?= $section_1['image']['alt'] ?>"></div>
                         <div class="fw-400 description">
@@ -27,7 +27,7 @@ $section_6 = get_field('section_6');
                         </div>
                         <a href="<?= $section_1['button']['url'] ?>" target="<?= $section_1['button']['target'] ?>" class="btn btn-secondary rounded-pill text-white px-4 fw-600"><?= $section_1['button']['title'] ?></a>
                     </div>
-                    <div class="col-lg-5 d-none d-lg-block" data-aos="fade-left">
+                    <div class="col-lg-6 col-xl-5 d-none d-lg-block" data-aos="fade-left">
                         <div class="section_image"><img src="<?= $section_1['image']['url'] ?>" class="w-100" alt="<?= $section_1['image']['alt'] ?>"></div>
                     </div>
                 </div>
@@ -46,7 +46,7 @@ $section_6 = get_field('section_6');
                         <div class="fs-50 lh-1 fw-600 text-primary"><?= $section_2['heading'] ?></div>
                         <div class="text-secondary lh-1 fw-600 fs-20 pt-4 py-md-4"><?= $section_2['sub_heading'] ?></div>
                         <div class="description"><?= $section_2['description'] ?></div>
-                        <div class="section_image mt-md-5"><img src="<?= $section_2['secondary_image']['url'] ?>" class="w-100" alt="<?= $section_2['secondary_image']['alt'] ?>"></div>
+                        <div class="section_image mt-md-5 mt-lg-0 mt-xl-5"><img src="<?= $section_2['secondary_image']['url'] ?>" class="w-100" alt="<?= $section_2['secondary_image']['alt'] ?>"></div>
                         <div class="section_image mt-4 d-lg-none"><img src="<?= $section_2['hero_image']['url'] ?>" class="w-100" alt="<?= $section_2['hero_image']['alt'] ?>"></div>
                     </div>
                 </div>
@@ -57,7 +57,7 @@ $section_6 = get_field('section_6');
                             if (have_rows('commitments')) :
                                 while (have_rows('commitments')) : the_row();
                     ?>
-                                    <div class="col-md-6 col-lg-4">
+                                    <div class="col-md-6 col-xl-4">
                                         <div class="commitment">
                                             <?= get_sub_field('text') ?>
                                         </div>
@@ -78,7 +78,7 @@ $section_6 = get_field('section_6');
             <div class="container">
                 <div class="fs-50 fw-600 lh-1"><?= $section_3['heading'] ?></div>
                 <div class="description"><?= $section_3['description_1'] ?></div>
-                <div class="row justify-content-md-center gy-5 gx-md-5">
+                <div class="row justify-content-md-center gy-5 gx-md-5 gx-lg-4 gx-xl-5">
                     <?php
                     if (have_rows('section_3')) :
                         while (have_rows('section_3')) : the_row();
@@ -112,7 +112,7 @@ $section_6 = get_field('section_6');
                         <div class="section_image d-md-none mt-5"><img src="<?= $section_5['image']['url'] ?>" class="w-100" alt="<?= $section_5['image']['alt'] ?>"></div>
                         <div class="description"><?= $section_5['description'] ?></div>
                     </div>
-                    <div class="col-lg-5 d-none d-md-block">
+                    <div class="col-lg-6 col-xl-5 d-none d-md-block">
                         <div class="section_image"><img src="<?= $section_5['image']['url'] ?>" class="w-100" alt="<?= $section_5['image']['alt'] ?>"></div>
                     </div>
                 </div>

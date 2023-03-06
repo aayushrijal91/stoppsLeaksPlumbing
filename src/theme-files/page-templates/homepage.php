@@ -18,7 +18,7 @@ $section_5 = get_field('section_5');
         <section class="section_1 bg-primary text-white">
             <div class="container">
                 <div class="row justify-content-between">
-                    <div class="col-lg-6 pe-lg-5" data-aos="fade-right">
+                    <div class="col-lg-6 pe-xl-5" data-aos="fade-right">
                         <div class="fs-50 fw-600 lh-1"><?= $section_1['heading'] ?></div>
                         <div class="section_image d-lg-none mt-5"><img src="<?= $section_1['image']['url'] ?>" class="w-100" alt="<?= $section_1['image']['alt'] ?>"></div>
                         <div class="fw-400 description">
@@ -26,7 +26,7 @@ $section_5 = get_field('section_5');
                         </div>
                         <a href="<?= $section_1['button']['url'] ?>" target="<?= $section_1['button']['target'] ?>" class="btn btn-secondary rounded-pill text-white px-4 fw-600"><?= $section_1['button']['title'] ?></a>
                     </div>
-                    <div class="col-lg-5 d-none d-lg-block" data-aos="fade-left">
+                    <div class="col-lg-6 col-xl-5 d-none d-lg-block" data-aos="fade-left">
                         <div class="section_image"><img src="<?= $section_1['image']['url'] ?>" class="w-100" alt="<?= $section_1['image']['alt'] ?>"></div>
                     </div>
                 </div>
@@ -55,7 +55,7 @@ $section_5 = get_field('section_5');
         <section class="section_4">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-8">
+                    <div class="col-xl-8">
                         <div class="fs-75 fw-600 text-primary lh-0_86"><?= $section_4['heading'] ?></div>
                     </div>
                 </div>
@@ -66,7 +66,7 @@ $section_5 = get_field('section_5');
                             if (have_rows('reasons')) :
                                 while (have_rows('reasons')) : the_row();
                     ?>
-                                    <div class="col-md-6 col-lg-3">
+                                    <div class="col-md-6 col-xl-3">
                                         <div class="why-us-card">
                                             <div><?= get_sub_field('icon') ?></div>
                                             <div class="pt-4"><?= get_sub_field('text') ?></div>

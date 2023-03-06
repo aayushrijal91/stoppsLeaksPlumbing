@@ -20,7 +20,7 @@ $section_1 = get_field('section_1');
                         <div class="section_image mt-5 d-md-none"><img src="<?= $section_1['image']['url'] ?>" class="w-100" alt="<?= $section_1['image']['alt'] ?>"></div>
                         <div class="description"><?= $section_1['description'] ?></div>
                     </div>
-                    <div class="col-lg-5 d-none d-md-block" data-aos="fade-left">
+                    <div class="col-lg-6 col-xl-5 d-none d-md-block" data-aos="fade-left">
                         <div class="section_image"><img src="<?= $section_1['image']['url'] ?>" class="w-100" alt="<?= $section_1['image']['alt'] ?>"></div>
                     </div>
                 </div>

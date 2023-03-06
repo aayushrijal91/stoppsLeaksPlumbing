@@ -30,7 +30,7 @@ if (!empty($services['heading'])) : ?>
                         $the_query->the_post();
                         $featured_img_url = get_the_post_thumbnail_url($post->ID, 'full');
                 ?>
-                        <div class="col-md-6 col-lg-4">
+                        <div class="col-md-6 col-xl-4">
                             <div class="service_card">
                                 <div class="featured_image"><img src="<?= $featured_img_url ?>" alt="featured"></div>
                                 <div class="pt-3 pt-md-4"><a href="<?= get_the_permalink() ?>" class="service_title lh-1 fw-600 <?= $services['theme'] == 'Primary' ? 'text-primary' : 'text-white' ?>"><?= get_the_title() ?></a></div>

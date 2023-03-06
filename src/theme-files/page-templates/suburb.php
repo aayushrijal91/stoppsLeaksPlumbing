@@ -26,7 +26,7 @@ get_template_part('parts/section', 'banner');
                         <p>We will inspect the problem, assess and discuss appropriate solutions and recommend the best remedy. After consultation will we proceed and fix the problem. We take full responsibility of cleanliness at your property in <?= the_title() ?> leaving the job site neat and tidy.</p>
                     </div>
                 </div>
-                <div class="col-lg-5" data-aos="fade-left">
+                <div class="col-lg-6 col-xl-5" data-aos="fade-left">
                     <div class="section_image"><img src="<?= get_template_directory_uri() ?>/images/lib/suburb-aaron.jpg" class="w-100" alt="Suburb"></div>
                 </div>
             </div>
@@ -36,7 +36,7 @@ get_template_part('parts/section', 'banner');
     <section class="section_3 pt-7 pb-4 py-md-7">
         <div class="container">
             <div class="row justify-content-between align-items-center gy-5">
-                <div class="col-lg-5" data-aos="fade-right">
+                <div class="col-lg-6 col-xl-5" data-aos="fade-right">
                     <div class="section_image"><img src="<?= get_template_directory_uri() ?>/images/lib/backflow.jpg" class="w-100" alt="Suburb"></div>
                 </div>
                 <div class="col-lg-6" data-aos="fade-left">
@@ -86,7 +86,7 @@ get_template_part('parts/section', 'banner');
                         $the_query->the_post();
                         $featured_img_url = get_the_post_thumbnail_url($post->ID, 'full');
                 ?>
-                        <div class="col-md-6 col-lg-4">
+                        <div class="col-md-6 col-xl-4">
                             <div class="service_card">
                                 <div class="featured_image"><img src="<?= $featured_img_url ?>" alt="featured"></div>
                                 <div class="pt-4"><a href="<?= get_the_permalink() ?>" class="service_title lh-1 fw-600 text-primary"><?= get_the_title() ?></a></div>

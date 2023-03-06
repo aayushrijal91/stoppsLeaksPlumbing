@@ -1,12 +1,12 @@
 <section class="footer_top bg-primary py-6 text-white">
     <div class="container">
         <div class="row">
-            <div class="col-lg-4">
+            <div class="col-xl-4">
                 <div class="row justify-content-between align-items-center">
-                    <div class="col-4 col-lg-12">
+                    <div class="col-4 col-xl-12">
                         <a href="<?= home_url() ?>"><img src="<?= get_field('footer_logo', 'options')['url'] ?>" alt="<?= get_field('footer_logo', 'options')['url'] ?>"></a>
                     </div>
-                    <div class="col-auto d-lg-none">
+                    <div class="col-auto d-xl-none">
                         <div class="row">
                             <?php if (have_rows('socials', 'option')) :
                                 while (have_rows('socials', 'option')) : the_row();
@@ -50,7 +50,7 @@
                         <div><?= get_field('mobile_number', 'option') ?></div>
                     </div>
                 </div>
-                <div class="row d-none d-lg-flex">
+                <div class="row d-none d-xl-flex">
                     <?php if (have_rows('socials', 'option')) :
                         while (have_rows('socials', 'option')) : the_row();
                             $icon = get_sub_field('icon');
