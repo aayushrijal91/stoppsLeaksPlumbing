@@ -83,13 +83,13 @@ $section_13 = get_field('section_13');
                         <div class="row align-items-center">
                             <div class="col-lg-6" data-aos="fade-right">
                                 <div class="fs-50 fw-600 lh-1 <?= ($section_3['theme'] == 'Light') ? 'text-primary' : '' ?>"><?= $section_3['heading'] ?></div>
-                                <div class="section_image d-md-none mt-5"><img src="<?= $section_3['image']['url'] ?>" class="w-100" alt="<?= $section_3['image']['alt'] ?>"></div>
+                                <div class="section_image d-lg-none mt-5"><img src="<?= $section_3['image']['url'] ?>" class="w-100" alt="<?= $section_3['image']['alt'] ?>"></div>
                                 <div class="description"><?= $section_3['description'] ?></div>
                                 <?php if (!empty($section_3['button'])) : ?>
                                     <a href="<?= $section_3['button']['url'] ?>" target="<?= $section_3['button']['target'] ?>" class="btn <?= ($section_3['theme'] == 'Dark') ? 'btn-secondary' : 'btn-primary' ?> rounded-pill px-4 fw-600 text-white"><?= $section_3['button']['title'] ?></a>
                                 <?php endif; ?>
                             </div>
-                            <div class="col-lg-6 d-none d-md-block" data-aos="fade-left">
+                            <div class="col-lg-6 d-none d-lg-block" data-aos="fade-left">
                                 <div class="section_image"><img src="<?= $section_3['image']['url'] ?>" class="w-100" alt="<?= $section_3['image']['alt'] ?>"></div>
                             </div>
                         </div>
@@ -109,9 +109,9 @@ $section_13 = get_field('section_13');
                             while (have_rows('section_4')) : the_row();
                                 if (have_rows('list')) :
                         ?>
-                                    <div class="row justify-content-md-center py-md-5 gy-5 gy-md-4 gy-lg-0<?= ($section_4['theme'] == 'Light') ? ' gx-lg-5' : ''; ?>">
+                                    <div class="row justify-content-md-center py-md-5 gy-5 gy-lg-4 gy-lg-0<?= ($section_4['theme'] == 'Light') ? ' gx-lg-5' : ''; ?>">
                                         <?php while (have_rows('list')) : the_row(); ?>
-                                            <div class="col-md-4 col-lg">
+                                            <div class="col-md-6 col-lg">
                                                 <div class="list_card">
                                                     <div class="section_image"><img src="<?= get_sub_field('image')['url'] ?>" class="w-100 rounded-10" alt="<?= get_sub_field('image')['alt'] ?>"></div>
                                                     <div class="fw-500 fs-20 pt-3 <?= ($section_4['theme'] == 'Dark') ? 'text-white' : 'text-center text-primary'; ?>"><?= get_sub_field('title') ?></div>
@@ -238,7 +238,7 @@ $section_13 = get_field('section_13');
                         ?>
                                         <div class="list_card">
                                             <div class="row align-items-center">
-                                                <div class="col-1 col-lg-2">
+                                                <div class="col-1 col-md-2 col-lg-2">
                                                     <div class="index text-center"><?= $index ?></div>
                                                 </div>
                                                 <div class="col">
@@ -355,7 +355,7 @@ $section_13 = get_field('section_13');
                 <section class="section_12 bg-primary text-white">
                     <div class="container">
                         <div class="row align-items-center justify-content-between">
-                            <div class="col-lg-5" data-aos="fade-right">
+                            <div class="col-lg-5 d-none d-lg-block" data-aos="fade-right">
                                 <div class="section_image"><img src="<?= $section_12['image']['url'] ?>" class="w-100" alt="<?= $section_12['image']['alt'] ?>"></div>
                             </div>
                             <div class="col-lg-6" data-aos="fade-left">
@@ -364,7 +364,9 @@ $section_13 = get_field('section_13');
                             </div>
                         </div>
 
-                        <div class="fs-50 fw-600 lh-1 pt-7 pb-5">We Can:</div>
+                        <div class="section_image d-lg-none"><img src="<?= $section_12['image']['url'] ?>" class="w-100" alt="<?= $section_12['image']['alt'] ?>"></div>
+
+                        <div class="fs-50 fw-600 lh-1 pt-5 pb-4 pt-lg-7 pb-md-5">We Can:</div>
 
                         <?php
                         if (have_rows('section_12')) :
@@ -373,7 +375,7 @@ $section_13 = get_field('section_13');
                                     $index = 1;
                                     while (have_rows('list')) : the_row();
                         ?>
-                                        <div class="list_card gap-5">
+                                        <div class="list_card gap-3 gap-md-5">
                                             <div class="index"><?= $index ?></div>
                                             <div class="fs-18"><?= get_sub_field('text') ?></div>
                                         </div>

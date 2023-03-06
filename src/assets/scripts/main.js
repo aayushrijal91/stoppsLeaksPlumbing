@@ -50,6 +50,14 @@ jQuery(function ($) {
                         autoplay: true,
                         responsive: [
                             {
+                                breakpoint: 1100,
+                                settings: {
+                                    slidesToShow: 3,
+                                    arrows: false,
+                                    dots: true
+                                }
+                            },
+                            {
                                 breakpoint: 540,
                                 settings: {
                                     slidesToShow: 2,

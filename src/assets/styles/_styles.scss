@@ -630,7 +630,7 @@ header {
         ul.areasWrapper {
             padding-inline-start: 0;
             margin-bottom: 0;
-            
+
             @include media-breakpoint-up(md) {
                 column-count: 2;
                 column-gap: 75px;
@@ -757,7 +757,7 @@ header {
         }
 
         .service_card {
-            background: $secondary;
+            background: $primary;
             border-radius: 10px;
             min-height: 82px;
             height: 100%;
@@ -768,11 +768,15 @@ header {
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding: 16px 54px;
+            padding: 16px 24px;
 
             @include media-breakpoint-up(md) {
                 font-size: 1.25rem;
-            min-height: 160px;
+                min-height: 160px;
+            }
+            
+            @include media-breakpoint-up(lg) {
+                padding: 16px 54px;
             }
         }
     }
@@ -836,7 +840,11 @@ header {
         }
 
         &.secondary {
-            background: $secondary imgUrl('pipes-primary.png') right center;
+            background: $secondary;
+
+            @include media-breakpoint-up(lg) {
+                background: $secondary imgUrl('pipes-primary.png') right center;
+            }
         }
 
         background-size: contain;
@@ -850,8 +858,12 @@ header {
             margin: 7.5px 0;
 
             @include media-breakpoint-up(md) {
-                padding: 42px 50px;
+                padding: 24px;
                 margin: 22px 0;
+            }
+
+            @include media-breakpoint-up(lg) {
+                padding: 42px 50px;
             }
 
             .index {
@@ -862,6 +874,10 @@ header {
                 font-size: 30px;
 
                 @include media-breakpoint-up(md) {
+                    font-size: 131px;
+                }
+
+                @include media-breakpoint-up(lg) {
                     font-size: 231px;
                 }
             }
@@ -894,19 +910,35 @@ header {
 
     section.section_11 {
         padding: 76px 0;
+
+        @include media-breakpoint-down(sm) {
+            padding: 60px 0;
+        }
     }
 
     section.section_12 {
         padding: 125px 0;
 
+        @include media-breakpoint-down(lg) {
+            padding: 80px 0;
+        }
+
+        @include media-breakpoint-down(sm) {
+            padding: 60px 0;
+        }
+
         .list_card {
             border-radius: 10px;
             background: $secondary;
             color: $white;
-            padding: 29px 42px;
+            padding: 12px 14px;
             margin: 22px 0;
             display: flex;
             align-items: center;
+
+            @include media-breakpoint-up(md) {
+                padding: 29px 42px;
+            }
 
             .index {
                 font-size: 50px;
@@ -915,6 +947,10 @@ header {
                 color: $primary;
                 opacity: 0.5;
                 gap: 31px;
+
+                @include media-breakpoint-down(sm) {
+                    font-size: 30px;
+                }
             }
         }
     }
