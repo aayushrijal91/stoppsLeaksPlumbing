@@ -15,6 +15,15 @@ get_template_part('parts/section', 'banner');
         </div>
     </div>
 
+    <div class="d-md-none">
+        <div class="container">
+            <div class="main_form">
+                <?= do_shortcode('[contact-form-7 id="215" title="Contact Us"]') ?>
+            </div>
+        </div>
+    </div>
+
+
     <section class="form">
         <div class="container">
             <div class="row">
@@ -24,13 +33,13 @@ get_template_part('parts/section', 'banner');
                             <div>
                                 <img src="<?= get_template_directory_uri() ?>/images/icons/contact-phone.png" alt="Phone">
                             </div>
-                            <?= get_field('phone_number', 'option') ?>
+                            <a href="tel:<?= get_field('phone_number', 'option') ?>" class="text-white"><?= get_field('phone_number', 'option') ?></a>
                         </li>
                         <li>
                             <div>
                                 <img src="<?= get_template_directory_uri() ?>/images/icons/contact-phone.png" alt="Phone">
                             </div>
-                            <?= get_field('mobile_number', 'option') ?>
+                            <a href="tel:<?= get_field('mobile_number', 'option') ?>" class="text-white"><?= get_field('mobile_number', 'option') ?></a>
                         </li>
                         <li>
                             <div>
@@ -42,7 +51,7 @@ get_template_part('parts/section', 'banner');
                                     <circle cx="31" cy="31" r="30" stroke="#3498DB" stroke-width="2" />
                                 </svg>
                             </div>
-                            <?= get_field('admin_email', 'option') ?>
+                            <a href="mailto:<?= get_field('admin_email', 'option') ?>" class="text-white"><?= get_field('admin_email', 'option') ?></a>
                         </li>
                         <li>
                             <div>
@@ -55,7 +64,7 @@ get_template_part('parts/section', 'banner');
                         </li>
                     </ul>
                 </div>
-                <div class="col-lg-5 position-relative">
+                <div class="col-lg-5 position-relative d-none d-md-block">
                     <div class="main_form">
                         <?= do_shortcode('[contact-form-7 id="215" title="Contact Us"]') ?>
                     </div>

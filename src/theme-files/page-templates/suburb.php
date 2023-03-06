@@ -16,7 +16,7 @@ get_template_part('parts/section', 'banner');
         </div>
     </section>
 
-    <section class="section_2 bg-primary text-white py-8">
+    <section class="section_2 bg-primary text-white py-6 py-md-8">
         <div class="container">
             <div class="row justify-content-between align-items-center">
                 <div class="col-lg-6" data-aos="fade-right">
@@ -33,11 +33,11 @@ get_template_part('parts/section', 'banner');
         </div>
     </section>
 
-    <section class="section_3 py-7">
+    <section class="section_3 pt-7 pb-4 py-md-7">
         <div class="container">
-            <div class="row justify-content-between align-items-center">
+            <div class="row justify-content-between align-items-center gy-5">
                 <div class="col-lg-5" data-aos="fade-right">
-                    <div class="section_image"><img src="<?= get_template_directory_uri() ?>/images/lib/suburb-aaron.jpg" class="w-100" alt="Suburb"></div>
+                    <div class="section_image"><img src="<?= get_template_directory_uri() ?>/images/lib/backflow.jpg" class="w-100" alt="Suburb"></div>
                 </div>
                 <div class="col-lg-6" data-aos="fade-left">
                     <div class="text-primary lh-1 fw-600 fs-50">Need an Emergency Plumber in <?= the_title() ?>?</div>
@@ -50,7 +50,7 @@ get_template_part('parts/section', 'banner');
         </div>
     </section>
 
-    <section class="section_4 py-7 text-white bg-secondary">
+    <section class="section_4 pt-7 pb-4 py-md-7 text-white bg-secondary">
         <div class="container">
             <div class="fs-50 lh-1 fw-600">We are the most trusted <?= the_title() ?> plumber</div>
             <div class="description">
@@ -62,19 +62,25 @@ get_template_part('parts/section', 'banner');
 
     <section class="service_listing">
         <div class="container">
-            <div class="fw-600 fs-75 text-primary lh-1 pb-4">Our <?= the_title() ?> plumbing services include:</div>
+            <div class="fw-600 fs-75 heading text-primary lh-1 pb-4">Our <?= the_title() ?> plumbing services include:</div>
 
-            <div class="row py-6 services gy-6">
+            <div class="row py-6 services gy-6" id="services">
                 <?php
                 $args = array(
+                    'post_type'      => 'page',
                     'posts_per_page' => -1,
-                    'post_type' => 'services',
                     'post__not_in' => array(get_the_ID()),
-                    'orderby' => 'menu_order',
-                    'order' => 'ASC',
+                    'order'          => 'ASC',
+                    'orderby'        => 'publish_date',
+                    'meta_query' => array(
+                        array(
+                            'key' => '_wp_page_template',
+                            'value' => 'page-templates/service.php'
+                        )
+                    )
                 );
-
                 $the_query = new WP_Query($args);
+
                 if ($the_query->have_posts()) :
                     while ($the_query->have_posts()) :
                         $the_query->the_post();
@@ -83,7 +89,7 @@ get_template_part('parts/section', 'banner');
                         <div class="col-md-6 col-lg-4">
                             <div class="service_card">
                                 <div class="featured_image"><img src="<?= $featured_img_url ?>" alt="featured"></div>
-                                <div class="pt-4"><a href="<?= get_the_permalink() ?>" class="fs-35 lh-1 fw-600 text-primary"><?= get_the_title() ?></a></div>
+                                <div class="pt-4"><a href="<?= get_the_permalink() ?>" class="service_title lh-1 fw-600 text-primary"><?= get_the_title() ?></a></div>
                             </div>
                         </div>
                 <?php
@@ -92,7 +98,7 @@ get_template_part('parts/section', 'banner');
                 wp_reset_postdata();
                 ?>
 
-                <div class="col">
+                <div class="col d-none d-md-block">
                     <div class="service_card">
                         <div class="featured_image bg-secondary px-5 d-flex align-items-center text-white">
                             <div>
