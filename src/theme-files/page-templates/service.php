@@ -111,7 +111,7 @@ $section_13 = get_field('section_13');
                         ?>
                                     <div class="row justify-content-md-center py-md-5 gy-5 gy-md-4 gy-lg-0<?= ($section_4['theme'] == 'Light') ? ' gx-lg-5' : ''; ?>">
                                         <?php while (have_rows('list')) : the_row(); ?>
-                                            <div class="col-6 col-md-4 col-lg">
+                                            <div class="col-md-4 col-lg">
                                                 <div class="list_card">
                                                     <div class="section_image"><img src="<?= get_sub_field('image')['url'] ?>" class="w-100 rounded-10" alt="<?= get_sub_field('image')['alt'] ?>"></div>
                                                     <div class="fw-500 fs-20 pt-3 <?= ($section_4['theme'] == 'Dark') ? 'text-white' : 'text-center text-primary'; ?>"><?= get_sub_field('title') ?></div>
@@ -238,12 +238,12 @@ $section_13 = get_field('section_13');
                         ?>
                                         <div class="list_card">
                                             <div class="row align-items-center">
-                                                <div class="col-lg-2">
+                                                <div class="col-1 col-lg-2">
                                                     <div class="index text-center"><?= $index ?></div>
                                                 </div>
                                                 <div class="col">
                                                     <div class="fs-20 fw-600 lh-2"><?= get_sub_field('title') ?></div>
-                                                    <div class="fs-20 fw-400 lh-1_6"><?= get_sub_field('description') ?></div>
+                                                    <div class="fs-20 fw-400 lh-1_6 d-none d-md-block"><?= get_sub_field('description') ?></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -267,7 +267,7 @@ $section_13 = get_field('section_13');
 
         <?php if ($section_9['display'] == 'Visible') : ?>
             <div class="order-<?= $section_9['order'] ?>">
-                <section class="section_9 py-7">
+                <section class="section_9 py-6 py-md-7">
                     <div class="container">
                         <div class="fs-50 lh-1 fw-600 text-primary"><?= $section_9['heading'] ?></div>
                         <?php if (!empty($section_9['description'])) : ?>
@@ -315,9 +315,9 @@ $section_13 = get_field('section_13');
                         ?>
                                     <div class="py-6">
                                         <?php while (have_rows('list')) : the_row(); ?>
-                                            <div class="d-flex gap-3 align-items-center py-3">
-                                                <div><img src="<?= get_sub_field('image')['url'] ?>" alt="<?= get_sub_field('image')['alt'] ?>"></div>
-                                                <div class="fs-20 lh-1"><?= get_sub_field('text') ?></div>
+                                            <div class="row gap-1 gap-md-3 align-items-center py-3">
+                                                <div class="col-2 col-md-auto"><img src="<?= get_sub_field('image')['url'] ?>" alt="<?= get_sub_field('image')['alt'] ?>"></div>
+                                                <div class="col fs-20"><?= get_sub_field('text') ?></div>
                                             </div>
                                         <?php endwhile; ?>
                                     </div>
