@@ -15,7 +15,7 @@ get_template_part('parts/section', 'banner');
         </div>
     </div>
 
-    <div class="d-md-none">
+    <div class="d-lg-none">
         <div class="container">
             <div class="main_form">
                 <?= do_shortcode('[contact-form-7 id="215" title="Contact Us"]') ?>
@@ -64,7 +64,7 @@ get_template_part('parts/section', 'banner');
                         </li>
                     </ul>
                 </div>
-                <div class="col-lg-5 position-relative d-none d-md-block">
+                <div class="col-lg-5 position-relative d-none d-lg-block">
                     <div class="main_form">
                         <?= do_shortcode('[contact-form-7 id="215" title="Contact Us"]') ?>
                     </div>

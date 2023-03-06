@@ -19,15 +19,15 @@ $section_6 = get_field('section_6');
         <section class="section_1 bg-primary text-white">
             <div class="container">
                 <div class="row justify-content-between">
-                    <div class="col-lg-6 pe-md-5" data-aos="fade-right">
+                    <div class="col-lg-6 pe-lg-5" data-aos="fade-right">
                         <div class="fs-50 fw-600 lh-1"><?= $section_1['heading'] ?></div>
-                        <div class="section_image mt-5 mb-4"><img src="<?= $section_1['image']['url'] ?>" class="w-100" alt="<?= $section_1['image']['alt'] ?>"></div>
+                        <div class="section_image mt-5 mb-4 d-lg-none"><img src="<?= $section_1['image']['url'] ?>" class="w-100" alt="<?= $section_1['image']['alt'] ?>"></div>
                         <div class="fw-400 description">
                             <?= $section_1['description'] ?>
                         </div>
                         <a href="<?= $section_1['button']['url'] ?>" target="<?= $section_1['button']['target'] ?>" class="btn btn-secondary rounded-pill text-white px-4 fw-600"><?= $section_1['button']['title'] ?></a>
                     </div>
-                    <div class="col-lg-5 d-none d-md-block" data-aos="fade-left">
+                    <div class="col-lg-5 d-none d-lg-block" data-aos="fade-left">
                         <div class="section_image"><img src="<?= $section_1['image']['url'] ?>" class="w-100" alt="<?= $section_1['image']['alt'] ?>"></div>
                     </div>
                 </div>
@@ -39,7 +39,7 @@ $section_6 = get_field('section_6');
         <section class="section_2">
             <div class="container">
                 <div class="row align-items-center gx-lg-6">
-                    <div class="col-lg-6 d-none d-md-block">
+                    <div class="col-lg-6 d-none d-lg-block">
                         <div class="section_image"><img src="<?= $section_2['hero_image']['url'] ?>" class="w-100" alt="<?= $section_2['hero_image']['alt'] ?>"></div>
                     </div>
                     <div class="col-lg-6">
@@ -47,7 +47,7 @@ $section_6 = get_field('section_6');
                         <div class="text-secondary lh-1 fw-600 fs-20 pt-4 py-md-4"><?= $section_2['sub_heading'] ?></div>
                         <div class="description"><?= $section_2['description'] ?></div>
                         <div class="section_image mt-md-5"><img src="<?= $section_2['secondary_image']['url'] ?>" class="w-100" alt="<?= $section_2['secondary_image']['alt'] ?>"></div>
-                        <div class="section_image mt-4 d-md-none"><img src="<?= $section_2['hero_image']['url'] ?>" class="w-100" alt="<?= $section_2['hero_image']['alt'] ?>"></div>
+                        <div class="section_image mt-4 d-lg-none"><img src="<?= $section_2['hero_image']['url'] ?>" class="w-100" alt="<?= $section_2['hero_image']['alt'] ?>"></div>
                     </div>
                 </div>
                 <div class="fs-50 lh-1 fw-600 text-primary py-5 pt-md-7 pb-md-6"><?= $section_2['secondary_heading'] ?></div>

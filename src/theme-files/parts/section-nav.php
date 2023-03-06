@@ -41,7 +41,7 @@
         </div>
     </div>
     <div class="navigation">
-        <div class="container d-none d-md-block">
+        <div class="container d-none d-lg-block">
             <div class="row justify-content-between align-items-center py-4">
                 <div class="col-auto">
                     <a class="navbar-brand m-0" href="<?= home_url() ?>"><img src="<?= $logo['url']; ?>" alt="<?= $logo['alt']; ?>" /></a>
@@ -67,7 +67,7 @@
         <div class="main_navigation">
             <div class="container">
                 <nav class="navbar navbar-expand-xl navbar-light py-3 py-md-4">
-                    <a class="navbar-brand m-0 d-md-none" href="<?= home_url() ?>"><img src="<?= $logo['url']; ?>" alt="<?= $logo['alt']; ?>" /></a>
+                    <a class="navbar-brand m-0 d-lg-none" href="<?= home_url() ?>"><img src="<?= $logo['url']; ?>" alt="<?= $logo['alt']; ?>" /></a>
 
                     <a href="javascript:void(0)" class="d-xl-none" id="triggerSlideNav">
                         <svg width="32" height="24" viewBox="0 0 32 24" fill="#363F94" xmlns="http://www.w3.org/2000/svg">

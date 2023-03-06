@@ -81,7 +81,7 @@ section.general_cta {
     .general_cta_inner {
         padding: 63px 24px;
 
-        @include media-breakpoint-up(md) {
+        @include media-breakpoint-up(lg) {
             padding: 86px 60px;
         }
 

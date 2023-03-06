@@ -18,15 +18,15 @@ $section_5 = get_field('section_5');
         <section class="section_1 bg-primary text-white">
             <div class="container">
                 <div class="row justify-content-between">
-                    <div class="col-lg-6 pe-md-5" data-aos="fade-right">
+                    <div class="col-lg-6 pe-lg-5" data-aos="fade-right">
                         <div class="fs-50 fw-600 lh-1"><?= $section_1['heading'] ?></div>
-                        <div class="section_image d-md-none mt-5"><img src="<?= $section_1['image']['url'] ?>" class="w-100" alt="<?= $section_1['image']['alt'] ?>"></div>
+                        <div class="section_image d-lg-none mt-5"><img src="<?= $section_1['image']['url'] ?>" class="w-100" alt="<?= $section_1['image']['alt'] ?>"></div>
                         <div class="fw-400 description">
                             <?= $section_1['description'] ?>
                         </div>
                         <a href="<?= $section_1['button']['url'] ?>" target="<?= $section_1['button']['target'] ?>" class="btn btn-secondary rounded-pill text-white px-4 fw-600"><?= $section_1['button']['title'] ?></a>
                     </div>
-                    <div class="col-lg-5 d-none d-md-block" data-aos="fade-left">
+                    <div class="col-lg-5 d-none d-lg-block" data-aos="fade-left">
                         <div class="section_image"><img src="<?= $section_1['image']['url'] ?>" class="w-100" alt="<?= $section_1['image']['alt'] ?>"></div>
                     </div>
                 </div>
@@ -59,7 +59,7 @@ $section_5 = get_field('section_5');
                         <div class="fs-75 fw-600 text-primary lh-0_86"><?= $section_4['heading'] ?></div>
                     </div>
                 </div>
-                <div class="row py-md-6" id="home_whyUs">
+                <div class="row gy-4 py-md-6" id="home_whyUs">
                     <?php
                     if (have_rows('section_4')) :
                         while (have_rows('section_4')) : the_row();

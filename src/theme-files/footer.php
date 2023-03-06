@@ -3,10 +3,10 @@
         <div class="row">
             <div class="col-lg-4">
                 <div class="row justify-content-between align-items-center">
-                    <div class="col-4 col-md-12">
+                    <div class="col-4 col-lg-12">
                         <a href="<?= home_url() ?>"><img src="<?= get_field('footer_logo', 'options')['url'] ?>" alt="<?= get_field('footer_logo', 'options')['url'] ?>"></a>
                     </div>
-                    <div class="col-4 d-md-none">
+                    <div class="col-auto d-lg-none">
                         <div class="row">
                             <?php if (have_rows('socials', 'option')) :
                                 while (have_rows('socials', 'option')) : the_row();
@@ -50,7 +50,7 @@
                         <div><?= get_field('mobile_number', 'option') ?></div>
                     </div>
                 </div>
-                <div class="row d-none d-md-flex">
+                <div class="row d-none d-lg-flex">
                     <?php if (have_rows('socials', 'option')) :
                         while (have_rows('socials', 'option')) : the_row();
                             $icon = get_sub_field('icon');
@@ -67,8 +67,8 @@
                 </div>
             </div>
             <div class="col-md">
-                <div class="row">
-                    <div class="col-md-3">
+                <div class="row gy-md-5 gy-lg-0">
+                    <div class="col-md-6 col-lg-3 order-1 order-lg-1">
                         <a href="javascript:void(0)" class="mobile_footer_link_header py-3">
                             <div class="fs-20 fw-600 text-white">Quick Links</div>
                             <div class="d-md-none">
@@ -85,7 +85,7 @@
                             'container_id' => '',
                         )); ?>
                     </div>
-                    <div class="col-md">
+                    <div class="col-md order-2 order-md-3">
                         <a href="javascript:void(0)" class="mobile_footer_link_header py-3">
                             <div class="fs-20 fw-600 text-white">Services</div>
                             <div class="d-md-none">
@@ -124,7 +124,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-lg-auto">
+                    <div class="col-md-6 col-lg-auto order-3 order-md-2 order-lg-3">
                         <a href="javascript:void(0)" class="mobile_footer_link_header py-3">
                             <div class="fs-20 fw-600 text-white">Support</div>
                             <div class="d-md-none">
