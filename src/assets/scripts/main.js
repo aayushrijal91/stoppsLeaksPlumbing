@@ -16,6 +16,13 @@ jQuery(function ($) {
                     $('.slide-nav').addClass('nav-open');
                 });
 
+                if($(document).width() <= 540) {
+                    $('header').css('background-image', `url(${$('header').attr('data-bg-sm')}`);
+                }
+                else {
+                    $('header').css('background-image', `url(${$('header').attr('data-bg-lg')}`);
+                }
+
                 $(() => {
                     $("#reviews_slider").slick({
                         slidesToShow: 3,

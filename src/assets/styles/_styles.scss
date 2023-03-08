@@ -165,6 +165,7 @@
 header {
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     height: 500px;
     padding: 157px 0;
 
@@ -732,7 +733,7 @@ header {
             &:hover {
                 transform: translateY(-10px);
             }
-            
+
             @include media-breakpoint-up(md) {
                 font-size: 1.25rem;
                 min-height: 160px;
@@ -925,10 +926,6 @@ header {
             padding: 64px 0;
         }
     }
-}
-
-.suburb {
-    section.section_1 {}
 }
 
 .footer_top {

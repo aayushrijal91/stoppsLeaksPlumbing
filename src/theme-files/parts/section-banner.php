@@ -1,23 +1,24 @@
 <?php
 get_template_part('parts/section', 'nav');
 $heading = "";
-$coverImg = "";
+$coverImg = get_template_directory_uri() . '/images/background/suburb-banner.jpg';
+$mobileCoverImg = $coverImg;
 $colorPreference = "";
 
 if (!empty(get_field('banner')['heading']) && !is_home()) {
     $heading = get_field('banner')['heading'];
-    $coverImg = get_field('banner')['cover_image']['url'];
+    $coverImg = !empty(get_field('banner')['cover_image']) ? get_field('banner')['cover_image']['url'] : $coverImg;
+    $mobileCoverImg = !empty(get_field('banner')['mobile_cover_image']) ? get_field('banner')['mobile_cover_image']['url'] : $coverImg;
     $button = get_field('banner')['button'];
     $colorPreference = get_field('banner')['heading_color_preference'];
 } else if (get_page_template('page-templates/suburb.php')) {
     $heading = get_the_title();
-    $coverImg = get_template_directory_uri() . '/images/background/suburb-banner.jpg';
     $colorPreference = 'Light';
 }
 
 if (!empty($heading)) :
 ?>
-    <header class="<?= (is_front_page() && is_page()) ? 'homepage' : '' ?><?= (!is_front_page() && is_page()) ? 'page' : '' ?><?= (is_page_template('page-templates/service.php')) ? ' servicePage' : '' ?><?= (is_page_template('page-templates/suburb.php')) ? ' suburbPage' : '' ?>" style="background-image: url('<?= $coverImg ?>');">
+    <header class="<?= (is_front_page() && is_page()) ? 'homepage' : '' ?><?= (!is_front_page() && is_page()) ? 'page' : '' ?><?= (is_page_template('page-templates/service.php')) ? ' servicePage' : '' ?><?= (is_page_template('page-templates/suburb.php')) ? ' suburbPage' : '' ?>" data-bg-lg="<?= $coverImg ?>" data-bg-sm="<?= $mobileCoverImg ?>">
         <div class="container">
             <div class="row<?= is_front_page() ? ' justify-content-end' : '' ?>">
                 <div class="col-lg-10<?= is_front_page() ? ' text-md-end' : '' ?>">

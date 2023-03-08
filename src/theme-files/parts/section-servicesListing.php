@@ -10,7 +10,7 @@ if (!empty($services['heading'])) : ?>
                     <?= $services['sub_heading'] ?>
                 </div>
             <?php endif; ?>
-            <div class="row <?= !empty($services['sub_heading']) ? 'mt-5 mb-4 my-lg-6' : 'mt-0 mb-5' ?> services gy-5 gy-lg-6" id="services">
+            <div class="row <?= !empty($services['sub_heading']) ? 'mt-5 mb-4 my-lg-6' : 'mt-0 mb-5' ?> services gy-md-5 gy-lg-6" id="services">
                 <?php
                 $args = array(
                     'post_type'      => 'page',

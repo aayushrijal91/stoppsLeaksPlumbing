@@ -21,12 +21,13 @@ get_template_part('parts/section', 'banner');
             <div class="row justify-content-between align-items-center">
                 <div class="col-lg-6" data-aos="fade-right">
                     <div class="fs-50 lh-1 fw-600 text-capitalize">Professional <?= the_title() ?> plumbing team on-call now</div>
+                    <div class="section_image d-lg-none mt-4 mt-md-5 mb-md-4"><img src="<?= get_template_directory_uri() ?>/images/lib/suburb-aaron.jpg" class="w-100" alt="Suburb"></div>
                     <div class="description">
                         <p>Our qualified team, offer a wide range plumbing service in <?= the_title() ?>. We specialise in general maintenance, blocked drains, pipe locating to identify broken or blocked pipes and leaks, gas installation & repairs, tap and toilet repairs and installation, installation of hot water systems, gas and water leak detection, backflow prevention testing and certification and more in <?= the_title() ?>.</p>
                         <p>We will inspect the problem, assess and discuss appropriate solutions and recommend the best remedy. After consultation will we proceed and fix the problem. We take full responsibility of cleanliness at your property in <?= the_title() ?> leaving the job site neat and tidy.</p>
                     </div>
                 </div>
-                <div class="col-lg-6 col-xl-5" data-aos="fade-left">
+                <div class="col-lg-6 col-xl-5 d-none d-lg-block" data-aos="fade-left">
                     <div class="section_image"><img src="<?= get_template_directory_uri() ?>/images/lib/suburb-aaron.jpg" class="w-100" alt="Suburb"></div>
                 </div>
             </div>
@@ -62,9 +63,9 @@ get_template_part('parts/section', 'banner');
 
     <section class="service_listing">
         <div class="container">
-            <div class="fw-600 fs-75 heading text-primary lh-1 pb-4">Our <?= the_title() ?> plumbing services include:</div>
+            <div class="fw-600 fs-75 heading text-primary lh-1 pb-5 pb-md-4">Our <?= the_title() ?> plumbing services include:</div>
 
-            <div class="row py-6 services gy-6" id="services">
+            <div class="row py-md-6 services gy-md-5 gy-lg-6" id="services">
                 <?php
                 $args = array(
                     'post_type'      => 'page',
