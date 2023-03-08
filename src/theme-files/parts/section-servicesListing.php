@@ -5,10 +5,12 @@ if (!empty($services['heading'])) : ?>
             <?php if (!empty($services['heading'])) : ?>
                 <div class="fw-600 fs-75 heading lh-1 pb-4"><?= $services['heading'] ?></div>
             <?php endif; ?>
-            <div class="fs-20 pt-2 subheading">
-                <?= $services['sub_heading'] ?>
-            </div>
-            <div class="row my-6 services gy-6" id="services">
+            <?php if (!empty($services['sub_heading'])) : ?>
+                <div class="fs-20 pt-2 subheading">
+                    <?= $services['sub_heading'] ?>
+                </div>
+            <?php endif; ?>
+            <div class="row <?= !empty($services['sub_heading']) ? 'mt-5 mb-4 my-lg-6' : 'mt-0 mb-5' ?> services gy-5 gy-lg-6" id="services">
                 <?php
                 $args = array(
                     'post_type'      => 'page',
@@ -24,16 +26,25 @@ if (!empty($services['heading'])) : ?>
                     )
                 );
                 $the_query = new WP_Query($args);
-                    
+
                 if ($the_query->have_posts()) :
                     while ($the_query->have_posts()) :
                         $the_query->the_post();
                         $featured_img_url = get_the_post_thumbnail_url($post->ID, 'full');
                 ?>
                         <div class="col-md-6 col-xl-4">
-                            <div class="service_card">
-                                <div class="featured_image"><img src="<?= $featured_img_url ?>" alt="featured"></div>
-                                <div class="pt-3 pt-md-4"><a href="<?= get_the_permalink() ?>" class="service_title lh-1 fw-600 <?= $services['theme'] == 'Primary' ? 'text-primary' : 'text-white' ?>"><?= get_the_title() ?></a></div>
+                            <div class="service_card <?= strtolower($services['theme']) ?>">
+                                <div class="featured_image">
+                                    <img src="<?= $featured_img_url ?>" alt="featured">
+                                    <div class="overlay">
+                                        <a href="<?= get_the_permalink() ?>" class="btn bordered border-white rounded-pill text-white py-2 px-4 fw-500">
+                                            Learn More
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="pt-3 pt-md-4">
+                                    <a href="<?= get_the_permalink() ?>" class="service_title lh-1 fw-600"><?= get_the_title() ?></a>
+                                </div>
                             </div>
                         </div>
                 <?php

@@ -67,7 +67,7 @@ $section_5 = get_field('section_5');
                                 while (have_rows('reasons')) : the_row();
                     ?>
                                     <div class="col-md-6 col-xl-3">
-                                        <div class="why-us-card">
+                                        <div class="why_us_card">
                                             <div><?= get_sub_field('icon') ?></div>
                                             <div class="pt-4"><?= get_sub_field('text') ?></div>
                                         </div>
@@ -97,9 +97,9 @@ $section_5 = get_field('section_5');
                                     $icon = get_sub_field('icon');
                                     $text = get_sub_field('text');
                                 ?>
-                                    <li class="d-flex align-items-center gap-4 gap-md-5">
+                                    <li class="d-flex align-items-center gap-4">
                                         <img src="<?= $icon['url'] ?>" alt="<?= $icon['url'] ?>">
-                                        <div class="fs-20 fw-600"><?= $text ?></div>
+                                        <div class="fs-20 fw-500"><?= $text ?></div>
                                     </li>
                                 <?php endwhile; ?>
                             </ul>

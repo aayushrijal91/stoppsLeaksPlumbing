@@ -37,7 +37,7 @@ if ($the_query->have_posts()) {
 <div class="locations">
     <section class="section_1 bg-primary text-white pt-6 pb-4 py-md-7">
         <div class="container">
-            <div class="fs-60 fw-600 lh-1">See what locations we service</div>
+            <div class="fs-60 fw-600 lh-1 pb-4 pb-xl-5">See what locations we service</div>
 
             <section class="areas">
                 <div class="container">

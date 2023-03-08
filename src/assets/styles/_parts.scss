@@ -33,7 +33,6 @@ section.service_listing {
     }
 
     .services {
-
         .slick-slide {
             margin: 0 6px;
         }
@@ -41,6 +40,7 @@ section.service_listing {
         .service_card {
             .service_title {
                 font-size: 35px;
+                transition: 0.2s all;
 
                 @include media-breakpoint-down(sm) {
                     font-size: 1.125rem;
@@ -51,6 +51,7 @@ section.service_listing {
                 height: 395px;
                 overflow: hidden;
                 border-radius: 10px;
+                position: relative;
 
                 img {
                     width: 100%;
@@ -61,6 +62,49 @@ section.service_listing {
 
                 @include media-breakpoint-down(sm) {
                     height: 327px;
+                }
+
+                .overlay {
+                    position: absolute;
+                    background: rgba(52, 152, 219, 0.37);
+                    height: 100%;
+                    width: 100%;
+                    top: 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    opacity: 0;
+                    transition: 0.2s all;
+                }
+            }
+
+            &.primary{
+                a.service_title {
+                    color: $primary;
+                }
+
+                &:hover {
+                    a.service_title {
+                        color: $secondary;
+                    }
+                }
+            }
+
+            &.secondary{
+                a.service_title {
+                    color: $white;
+                }
+
+                &:hover {
+                    a.service_title {
+                        color: $primary;
+                    }
+                }
+            }
+
+            &:hover {
+                .featured_image .overlay {
+                    opacity: 1;
                 }
             }
         }

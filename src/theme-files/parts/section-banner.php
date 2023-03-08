@@ -20,7 +20,7 @@ if (!empty($heading)) :
     <header class="<?= (is_front_page() && is_page()) ? 'homepage' : '' ?><?= (!is_front_page() && is_page()) ? 'page' : '' ?><?= (is_page_template('page-templates/service.php')) ? ' servicePage' : '' ?><?= (is_page_template('page-templates/suburb.php')) ? ' suburbPage' : '' ?>" style="background-image: url('<?= $coverImg ?>');">
         <div class="container">
             <div class="row<?= is_front_page() ? ' justify-content-end' : '' ?>">
-                <div class="<?= is_front_page() ? 'col-lg-10 text-md-end' : 'col-lg-9' ?>">
+                <div class="col-lg-10<?= is_front_page() ? ' text-md-end' : '' ?>">
                     <h1 class="fs-75 <?= $colorPreference == 'Light' ? 'text-white' : 'text-primary' ?> fw-600 lh-0_86"><?= $heading ?></h1>
                 </div>
             </div>
