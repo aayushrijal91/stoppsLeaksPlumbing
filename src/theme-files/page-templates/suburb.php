@@ -105,7 +105,7 @@ get_template_part('parts/section', 'banner');
                             <div>
                                 <div class="fs-35 fw-600 lh-1">We Would love to hear from you!</div>
                                 <div class="fs-20 pt-2 pb-5">Why not give us a call on <a href="tel:<?= get_field('mobile_number', 'option') ?>" class="text-white fw-600"><?= get_field('mobile_number', 'option') ?></a> or <a href="tel:<?= get_field('phone_number', 'option') ?>" class="text-white fw-600"><?= get_field('phone_number', 'option') ?></a></div>
-                                <a href="<?= get_site_url() ?>/contact-us" class="btn btn-primary rounded-pill fw-600 px-4">Find out more</a>
+                                <a href="https://book.servicem8.com/request_booking?uuid=7ae8ad5f-311c-401b-bdec-03424e1c3f4b" target="_blank" class="btn btn-primary rounded-pill fw-600 px-4">Find out more</a>
                             </div>
                         </div>
                     </div>
