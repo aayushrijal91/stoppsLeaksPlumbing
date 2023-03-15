@@ -34,9 +34,9 @@
                 </a>
             </div>
             <div class="col-6">
-            <a href="<?= get_field('nav_button', 'options')['url'] ?>" class="btn btn-primary rounded-pill text-white px-4 fw-600">
-                            <?= get_field('nav_button', 'options')['title'] ?>
-                        </a>
+                <a href="<?= get_field('nav_button', 'options')['url'] ?>" class="btn btn-primary rounded-pill text-white px-4 fw-600">
+                    <?= get_field('nav_button', 'options')['title'] ?>
+                </a>
             </div>
         </div>
     </div>
@@ -88,6 +88,20 @@
                         )); ?>
                     </div>
                 </nav>
+            </div>
+        </div>
+        <div class="container d-md-none pt-2 pb-4">
+            <div class="row nav-btns">
+                <div class="col-6">
+                    <a href="tel:<?= get_field('phone_number', 'options') ?>" class="btn bordered border-dark rounded-pill text-black py-2 px-2 fw-700 w-100">
+                        <?= get_field('phone_number', 'options') ?>
+                    </a>
+                </div>
+                <div class="col-6">
+                    <a href="tel:<?= get_field('mobile_number', 'options') ?>" class="btn bordered border-dark rounded-pill text-black py-2 px-2 fw-700 w-100">
+                        <?= get_field('mobile_number', 'options') ?>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
