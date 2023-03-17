@@ -66,7 +66,7 @@ $section_5 = get_field('section_5');
                             if (have_rows('reasons')) :
                                 while (have_rows('reasons')) : the_row();
                     ?>
-                                    <div class="col-md-6 col-xl-3">
+                                    <div class="col-md-6 col-lg-3">
                                         <div class="why_us_card">
                                             <div><?= get_sub_field('icon') ?></div>
                                             <div class="pt-4"><?= get_sub_field('text') ?></div>

@@ -32,7 +32,7 @@ if (!empty($services['heading'])) : ?>
                         $the_query->the_post();
                         $featured_img_url = get_the_post_thumbnail_url($post->ID, 'full');
                 ?>
-                        <div class="col-md-6 col-xl-4">
+                        <div class="col-md-6 col-lg-4">
                             <div class="service_card <?= strtolower($services['theme']) ?>">
                                 <div class="featured_image">
                                     <img src="<?= $featured_img_url ?>" alt="featured">
